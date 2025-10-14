@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+  <link as="style"
+    href="https://fonts.googleapis.com/css2?display=swap&amp;family=Work+Sans:wght@400;500;700&amp;family=Noto+Sans:wght@400;500;700;900"
+    onload="this.rel='stylesheet'" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#d43211',
+            'background-light': '#f8f6f6',
+            'background-dark': '#221310'
+          },
+          fontFamily: {
+            display: ['Work Sans']
+          },
+          borderRadius: {
+            DEFAULT: '0.25rem',
+            lg: '0.5rem',
+            xl: '0.75rem',
+            full: '9999px'
+          }
+        }
+      }
+    }
+  </script>
+  <title>Carnicería</title>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-zinc-900 dark:text-zinc-100">
+  <header
+        class="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-primary/20 bg-background-light/80 px-10 py-3 backdrop-blur-sm dark:bg-background-dark/80">
+        <div class="flex items-center gap-3">
+          <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
+              fill="currentColor"></path>
+          </svg>
+          <h2 class="text-lg font-bold">Carnicería El Rancho</h2>
+        </div>
+        <nav class="hidden items-center gap-8 md:flex" id="navMenu">
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/">Inicio</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/productos/">Productos</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/recetas/">Recetas</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/nosotros/">Nosotros</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/contacto/">Contacto</a>
+        </nav>
+        <button class="md:hidden text-gray-900 dark:text-white" id="btnMenu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+          </svg>
+        </button>
+        <div class="flex items-center gap-4">
+          <a href="/template-carniceria-01/carrito/"
+            class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-primary/10 text-primary/80 transition-colors hover:bg-primary/20 dark:bg-primary/20 dark:text-primary/90 dark:hover:bg-primary/30">
+            <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z">
+              </path>
+            </svg>
+        </a>
+        </div>
+      </header>
+  <main class="container mx-auto max-w-2xl px-4 py-8 sm:px-6 lg:px-8">
+    <div class="mb-6">
+      <nav aria-label="Breadcrumb" class="flex text-sm">
+        <ol class="inline-flex items-center space-x-1 md:space-x-2">
+          <li class="inline-flex items-center">
+            <a class="inline-flex items-center text-zinc-500 hover:text-primary dark:text-zinc-400 dark:hover:text-primary"
+              href="#">Inicio</a>
+          </li>
+          <li>
+            <div class="flex items-center">
+              <span class="text-zinc-400 dark:text-zinc-500">/</span>
+              <a class="ml-1 text-zinc-500 hover:text-primary dark:text-zinc-400 dark:hover:text-primary md:ml-2"
+                href="#">Carrito</a>
+            </div>
+          </li>
+          <li aria-current="page">
+            <div class="flex items-center">
+              <span class="text-zinc-400 dark:text-zinc-500">/</span>
+              <span class="ml-1 font-medium text-zinc-900 dark:text-zinc-100 md:ml-2">Pago</span>
+            </div>
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <h1 class="mb-8 text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-4xl">Pago</h1>
+    <div class="grid grid-cols-1 gap-x-8 gap-y-10">
+      <div class="space-y-8">
+        <div class="space-y-4">
+          <h2 class="text-xl font-semibold text-zinc-900 dark:text-zinc-100">Información de contacto</h2>
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div>
+              <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300" for="email">Correo electrónico</label>
+              <div class="mt-1">
+                <input
+                  class="block w-full rounded border-zinc-300 bg-background-light p-3 text-zinc-900 placeholder:text-zinc-400 focus:border-primary focus:ring-primary dark:border-zinc-700 dark:bg-background-dark dark:text-zinc-100 dark:placeholder:text-zinc-500 dark:focus:border-primary dark:focus:ring-primary"
+                  id="email" name="email" placeholder="john.doe@email.com" type="email" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300" for="phone">Teléfono</label>
+              <div class="mt-1">
+                <input
+                  class="block w-full rounded border-zinc-300 bg-background-light p-3 text-zinc-900 placeholder:text-zinc-400 focus:border-primary focus:ring-primary dark:border-zinc-700 dark:bg-background-dark dark:text-zinc-100 dark:placeholder:text-zinc-500 dark:focus:border-primary dark:focus:ring-primary"
+                  id="phone" name="phone" placeholder="(555) 123-4567" type="tel" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <h2 class="text-xl font-semibold text-zinc-900 dark:text-zinc-100">Dirección de envío</h2>
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div>
+              <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300" for="first-name">Primero Nombre</label>
+              <div class="mt-1">
+                <input
+                  class="block w-full rounded border-zinc-300 bg-background-light p-3 text-zinc-900 placeholder:text-zinc-400 focus:border-primary focus:ring-primary dark:border-zinc-700 dark:bg-background-dark dark:text-zinc-100 dark:placeholder:text-zinc-500 dark:focus:border-primary dark:focus:ring-primary"
+                  id="first-name" name="first-name" placeholder="Emily" type="text" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300" for="last-name">Apellido</label>
+              <div class="mt-1">
+                <input
+                  class="block w-full rounded border-zinc-300 bg-background-light p-3 text-zinc-900 placeholder:text-zinc-400 focus:border-primary focus:ring-primary dark:border-zinc-700 dark:bg-background-dark dark:text-zinc-100 dark:placeholder:text-zinc-500 dark:focus:border-primary dark:focus:ring-primary"
+                  id="last-name" name="last-name" placeholder="Smith" type="text" />
+              </div>
+            </div>
+            <div class="sm:col-span-2">
+              <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300" for="address">Dirección</label>
+              <div class="mt-1">
+                <input
+                  class="block w-full rounded border-zinc-300 bg-background-light p-3 text-zinc-900 placeholder:text-zinc-400 focus:border-primary focus:ring-primary dark:border-zinc-700 dark:bg-background-dark dark:text-zinc-100 dark:placeholder:text-zinc-500 dark:focus:border-primary dark:focus:ring-primary"
+                  id="address" name="address" placeholder="123 Calle principal" type="text" />
+              </div>
+            </div>
+            <div class="sm:col-span-2">
+              <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300" for="apartment">Depto, Suite, etc.
+                (opcional)</label>
+              <div class="mt-1">
+                <input
+                  class="block w-full rounded border-zinc-300 bg-background-light p-3 text-zinc-900 placeholder:text-zinc-400 focus:border-primary focus:ring-primary dark:border-zinc-700 dark:bg-background-dark dark:text-zinc-100 dark:placeholder:text-zinc-500 dark:focus:border-primary dark:focus:ring-primary"
+                  id="apartment" name="apartment" placeholder="Apt 4B" type="text" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300" for="city">Ciudad</label>
+              <div class="mt-1">
+                <input
+                  class="block w-full rounded border-zinc-300 bg-background-light p-3 text-zinc-900 placeholder:text-zinc-400 focus:border-primary focus:ring-primary dark:border-zinc-700 dark:bg-background-dark dark:text-zinc-100 dark:placeholder:text-zinc-500 dark:focus:border-primary dark:focus:ring-primary"
+                  id="city" name="city" placeholder="Anytown" type="text" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300" for="state">Estado</label>
+              <div class="mt-1">
+                <input
+                  class="block w-full rounded border-zinc-300 bg-background-light p-3 text-zinc-900 placeholder:text-zinc-400 focus:border-primary focus:ring-primary dark:border-zinc-700 dark:bg-background-dark dark:text-zinc-100 dark:placeholder:text-zinc-500 dark:focus:border-primary dark:focus:ring-primary"
+                  id="state" name="state" placeholder="CA" type="text" />
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300" for="zip">Código postal</label>
+              <div class="mt-1">
+                <input
+                  class="block w-full rounded border-zinc-300 bg-background-light p-3 text-zinc-900 placeholder:text-zinc-400 focus:border-primary focus:ring-primary dark:border-zinc-700 dark:bg-background-dark dark:text-zinc-100 dark:placeholder:text-zinc-500 dark:focus:border-primary dark:focus:ring-primary"
+                  id="zip" name="zip" placeholder="90210" type="text" />
+              </div>
+            </div>
+          </div>
+          <div class="relative flex items-start">
+            <div class="flex h-5 items-center">
+              <input
+                class="h-4 w-4 rounded border-zinc-300 text-primary focus:ring-primary dark:border-zinc-600 dark:bg-zinc-800 dark:checked:bg-primary dark:focus:ring-offset-background-dark"
+                id="same-as-shipping" name="same-as-shipping" type="checkbox" />
+            </div>
+            <div class="ml-3 text-sm">
+              <label class="font-medium text-zinc-700 dark:text-zinc-300" for="same-as-shipping">Mi facturación y envío dirección son las mismas</label>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <h2 class="text-xl font-semibold text-zinc-900 dark:text-zinc-100">Método de pago</h2>
+          <fieldset class="mt-4">
+            <legend class="sr-only">Payment type</legend>
+            <div class="space-y-4">
+              <label
+                class="relative flex cursor-pointer rounded-lg border border-zinc-300 bg-background-light p-4 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:border-zinc-700 dark:bg-background-dark dark:focus:ring-offset-background-dark">
+                <input aria-labelledby="credit-card-label" checked="" class="sr-only" name="payment-type" type="radio"
+                  value="credit-card" />
+                <span class="flex flex-1">
+                  <span class="flex flex-col">
+                    <span class="block text-sm font-medium text-zinc-900 dark:text-zinc-100"
+                      id="credit-card-label">Tarjeta de crédito</span>
+                  </span>
+                </span>
+                <span aria-hidden="true"
+                  class="mt-0.5 ml-4 flex h-5 w-5 items-center justify-center rounded-full border border-zinc-300 dark:border-zinc-600">
+                  <span class="h-2.5 w-2.5 rounded-full bg-transparent"></span>
+                </span>
+              </label>
+              <label
+                class="relative flex cursor-pointer rounded-lg border border-zinc-300 bg-background-light p-4 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:border-zinc-700 dark:bg-background-dark dark:focus:ring-offset-background-dark">
+                <input aria-labelledby="paypal-label" class="sr-only" name="payment-type" type="radio" value="paypal" />
+                <span class="flex flex-1">
+                  <span class="flex flex-col">
+                    <span class="block text-sm font-medium text-zinc-900 dark:text-zinc-100"
+                      id="paypal-label">PayPal</span>
+                  </span>
+                </span>
+                <span aria-hidden="true"
+                  class="mt-0.5 ml-4 flex h-5 w-5 items-center justify-center rounded-full border border-zinc-300 dark:border-zinc-600">
+                  <span class="h-2.5 w-2.5 rounded-full bg-transparent"></span>
+                </span>
+              </label>
+            </div>
+          </fieldset>
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-4">
+            <div class="sm:col-span-4">
+              <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300" for="card-number">Número de Tarjeta</label>
+              <div class="mt-1">
+                <input
+                  class="block w-full rounded border-zinc-300 bg-background-light p-3 text-zinc-900 placeholder:text-zinc-400 focus:border-primary focus:ring-primary dark:border-zinc-700 dark:bg-background-dark dark:text-zinc-100 dark:placeholder:text-zinc-500 dark:focus:border-primary dark:focus:ring-primary"
+                  id="card-number" name="card-number" placeholder="1234 5678 9101 1121" type="text" />
+              </div>
+            </div>
+            <div class="sm:col-span-2">
+              <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300" for="expiration-date">Fecha de expiración</label>
+              <div class="mt-1">
+                <input
+                  class="block w-full rounded border-zinc-300 bg-background-light p-3 text-zinc-900 placeholder:text-zinc-400 focus:border-primary focus:ring-primary dark:border-zinc-700 dark:bg-background-dark dark:text-zinc-100 dark:placeholder:text-zinc-500 dark:focus:border-primary dark:focus:ring-primary"
+                  id="expiration-date" name="expiration-date" placeholder="MM/YY" type="text" />
+              </div>
+            </div>
+            <div class="sm:col-span-2">
+              <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300" for="cvv">CVV</label>
+              <div class="mt-1">
+                <input
+                  class="block w-full rounded border-zinc-300 bg-background-light p-3 text-zinc-900 placeholder:text-zinc-400 focus:border-primary focus:ring-primary dark:border-zinc-700 dark:bg-background-dark dark:text-zinc-100 dark:placeholder:text-zinc-500 dark:focus:border-primary dark:focus:ring-primary"
+                  id="cvv" name="cvv" placeholder="123" type="text" />
+              </div>
+            </div>
+            <div class="sm:col-span-4">
+              <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300" for="name-on-card">Nombre en la tarjeta</label>
+              <div class="mt-1">
+                <input
+                  class="block w-full rounded border-zinc-300 bg-background-light p-3 text-zinc-900 placeholder:text-zinc-400 focus:border-primary focus:ring-primary dark:border-zinc-700 dark:bg-background-dark dark:text-zinc-100 dark:placeholder:text-zinc-500 dark:focus:border-primary dark:focus:ring-primary"
+                  id="name-on-card" name="name-on-card" placeholder="Emily Smith" type="text" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pt-4">
+          <a href="/template-carniceria-01/confirmacion/"
+            class="w-full rounded bg-primary py-3 px-4 text-base font-semibold text-white shadow-sm hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-background-dark"
+            >Realizar pedido</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <style>
+    input:checked~span[aria-hidden="true"] span {
+      background-color: #d43211;
+    }
+  </style>
+  <script src="../main.js"></script>
+</body>
+
+</html>

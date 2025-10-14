@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Carnicería</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d43211",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221310",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .custom-icon-color {
+            color: #221310;
+        }
+
+        .dark .custom-icon-color {
+            color: #f8f6f6;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-[#221310] dark:text-[#f8f6f6]">
+    <div class="relative flex min-h-screen w-full flex-col">
+        <header
+        class="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-primary/20 bg-background-light/80 px-10 py-3 backdrop-blur-sm dark:bg-background-dark/80">
+        <div class="flex items-center gap-3">
+          <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
+              fill="currentColor"></path>
+          </svg>
+          <h2 class="text-lg font-bold">Carnicería El Rancho</h2>
+        </div>
+        <nav class="hidden items-center gap-8 md:flex" id="navMenu">
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/">Inicio</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/productos/">Productos</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/recetas/">Recetas</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/nosotros/">Nosotros</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/contacto/">Contacto</a>
+        </nav>
+        <button class="md:hidden text-gray-900 dark:text-white" id="btnMenu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+          </svg>
+        </button>
+        <div class="flex items-center gap-4">
+          <a href="/template-carniceria-01/carrito/"
+            class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-primary/10 text-primary/80 transition-colors hover:bg-primary/20 dark:bg-primary/20 dark:text-primary/90 dark:hover:bg-primary/30">
+            <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z">
+              </path>
+            </svg>
+        </a>
+        </div>
+      </header>
+        <main class="flex-grow">
+            <div class="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
+                <div class="mb-12 text-center">
+                    <h2 class="text-4xl font-bold tracking-tight text-[#221310] dark:text-[#f8f6f6] sm:text-5xl">
+                        Nuestros Productos</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-[#221310]/70 dark:text-[#f8f6f6]/70">Descubre la mejor
+                        selección de carnes y cortes especiales, perfectos para cualquier ocasión.</p>
+                </div>
+                <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+                    <div
+                        class="group flex flex-col overflow-hidden rounded-lg bg-white/5 dark:bg-black/5 shadow-lg transition-transform duration-300 hover:scale-105">
+                        <div class="relative">
+                            <div class="aspect-square w-full bg-cover bg-center"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRWc5SX7Zam5stve7Ek37FXOpyw4tCjIimlG3VaeBSR1Q4EfzFIdRuB1vMTa8vP2P118q6et3JVDpx4m076gLHhSzPVH51GtxDZ9s81ZQI9Ye2uZvnrSUsz6aycdTm0SiVSOwLfnfIKTubXuA1xUHHfbiyUhiIAArU0o4oHrW0Q36leDgxEF_RZFpi3yYToCZsroLWlk2LDH_ZHzlTreIuJimA1LygD56Aj5cwvTCUlRhE-xBgvpYY1aTG88JcXTfk3VXVYkhpZtc");'>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 p-4">
+                                <h3 class="text-xl font-bold text-white">Corte de Res Premium</h3>
+                            </div>
+                        </div>
+                        <div class="flex flex-1 flex-col p-6">
+                            <p class="mb-4 text-sm text-[#221310]/80 dark:text-[#f8f6f6]/80">Corte de res de la más alta
+                                calidad, ideal para asados y parrillas.</p>
+                            <div class="mt-auto flex items-center justify-between">
+                                <p class="text-lg font-bold text-primary">$25.99/kg</p>
+                                <button
+                                    class="rounded bg-primary px-4 py-2 text-sm font-bold text-white transition-opacity hover:opacity-90">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="group flex flex-col overflow-hidden rounded-lg bg-white/5 dark:bg-black/5 shadow-lg transition-transform duration-300 hover:scale-105">
+                        <div class="relative">
+                            <div class="aspect-square w-full bg-cover bg-center"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD0RGBzVD-DSxeP6Hh_KPNVMYRceQ8OJsq4SpMIvfJAOV9ThZFReKfiwuYVhXpIqIFGHWU-LVgu0vVYBHCGOM1h6qzI3aj4xCg2BEhBBzZIyV0hRy2X8E_mmv08UIto8paRT5EcxHzX_4-abDqV1fOeHuNeeoHuotDYRF8CID55tt6LtnaAMkFKGID7abVY1cYT0INtfbyT1BwO_o9QbX4ghVyb4knhXEwzhA__jFk09yCucSIzft2FwHxofPgCpIZxyEmNVrsOYL4");'>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 p-4">
+                                <h3 class="text-xl font-bold text-white">Pollo de Corral</h3>
+                            </div>
+                        </div>
+                        <div class="flex flex-1 flex-col p-6">
+                            <p class="mb-4 text-sm text-[#221310]/80 dark:text-[#f8f6f6]/80">Pollo criado en libertad,
+                                con un sabor y textura inigualables.</p>
+                            <div class="mt-auto flex items-center justify-between">
+                                <p class="text-lg font-bold text-primary">$12.50/kg</p>
+                                <button
+                                    class="rounded bg-primary px-4 py-2 text-sm font-bold text-white transition-opacity hover:opacity-90">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="group flex flex-col overflow-hidden rounded-lg bg-white/5 dark:bg-black/5 shadow-lg transition-transform duration-300 hover:scale-105">
+                        <div class="relative">
+                            <div class="aspect-square w-full bg-cover bg-center"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDGvL9YoZK98IT2GepC6XtWB8myLLIGINd2dcuqmnP9DmoP4YMAVB40nRj9mTPvuui7bK5oHocuKCjhDfdMCJu2JUXzGgsK6d0aKwoSTXlqxKg8xJMVfo_YIM9z_P0M7mBbX3SQsUYM1UPBp31KKH8LGaLNz4n07_J3zn-kfiFeXrVMEoQ3zlB2x6btvnldEMU642dZUCP0I-rRcfbceW7p2Vr17qI2yfNjTGLMFlzU3M4Lmgp7D62RMoZIeY3Cc-Kyc4eDsC20H3k");'>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 p-4">
+                                <h3 class="text-xl font-bold text-white">Cerdo Ibérico</h3>
+                            </div>
+                        </div>
+                        <div class="flex flex-1 flex-col p-6">
+                            <p class="mb-4 text-sm text-[#221310]/80 dark:text-[#f8f6f6]/80">Cerdo de raza ibérica,
+                                conocido por su sabor intenso y marmoleado.</p>
+                            <div class="mt-auto flex items-center justify-between">
+                                <p class="text-lg font-bold text-primary">$18.75/kg</p>
+                                <button
+                                    class="rounded bg-primary px-4 py-2 text-sm font-bold text-white transition-opacity hover:opacity-90">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="group flex flex-col overflow-hidden rounded-lg bg-white/5 dark:bg-black/5 shadow-lg transition-transform duration-300 hover:scale-105">
+                        <div class="relative">
+                            <div class="aspect-square w-full bg-cover bg-center"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD8gC7galSficFKuayXN_Cv5JSmrb0DX85X-4BjqZAD1sCNdLDfhwf66-tBTuLKOZ3Y_xjZLfTrQWcfNvdD8xybmwKUIKnuuduWeSXhyMmJGdrjp7wG11WUErjhDcX9M7v8aZ0OOxyYTCmXDWjICQ_134zNt5jwQLmrLw_bRmnymkF8YgKSqBjLmrUycxMrv298_NhjoskiymanuRjEj4toCSpOKftbq76IMQVV8P8brP5JsCI1Qp9vu4xI0Dmb5dMn-GN7jIKjtXE");'>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 p-4">
+                                <h3 class="text-xl font-bold text-white">Cordero Patagónico</h3>
+                            </div>
+                        </div>
+                        <div class="flex flex-1 flex-col p-6">
+                            <p class="mb-4 text-sm text-[#221310]/80 dark:text-[#f8f6f6]/80">Cordero criado en la
+                                Patagonia, con un sabor suave y característico.</p>
+                            <div class="mt-auto flex items-center justify-between">
+                                <p class="text-lg font-bold text-primary">$32.00/kg</p>
+                                <button
+                                    class="rounded bg-primary px-4 py-2 text-sm font-bold text-white transition-opacity hover:opacity-90">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="group flex flex-col overflow-hidden rounded-lg bg-white/5 dark:bg-black/5 shadow-lg transition-transform duration-300 hover:scale-105">
+                        <div class="relative">
+                            <div class="aspect-square w-full bg-cover bg-center"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAL7qOX5CLLNKFpbylKfyKmgex9_htSWZlzFvw3kTQbVxAZjPik_DxwiwPadxJvSk6sMC6RGPhrL1hzhVgedzCuyGy37PtDLyuxKtggtic7pq_VXJVUOQZsIXFGph8Kl35dYNjb81uOPFs1-6r5lOrpcQhLp8_kI-L1GX8rfCJFG1oiRuMHIYJhamFIDm33MOOG7qJaeydivSE8aDkCW-mQtbfC9eyXUg57kVHGx5ku3rOiKoWoTU4Fgzgj_B8fuKMivFXp0VOPss0");'>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 p-4">
+                                <h3 class="text-xl font-bold text-white">Embutidos Artesanales</h3>
+                            </div>
+                        </div>
+                        <div class="flex flex-1 flex-col p-6">
+                            <p class="mb-4 text-sm text-[#221310]/80 dark:text-[#f8f6f6]/80">Embutidos elaborados de
+                                forma artesanal, con ingredientes naturales.</p>
+                            <div class="mt-auto flex items-center justify-between">
+                                <p class="text-lg font-bold text-primary">$9.99/u</p>
+                                <button
+                                    class="rounded bg-primary px-4 py-2 text-sm font-bold text-white transition-opacity hover:opacity-90">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="group flex flex-col overflow-hidden rounded-lg bg-white/5 dark:bg-black/5 shadow-lg transition-transform duration-300 hover:scale-105">
+                        <div class="relative">
+                            <div class="aspect-square w-full bg-cover bg-center"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAsTJnhWQXclmS9xduzg21dIp3AkLYXA_C9UpNqAp3UVzzO8Sz76UIYpJ8BKlww1dGrmr13snLLB7UFyIsY3RDZ7dEh8qSZRVotiLRokbt5smGO5OSzwuDPh2CsyXLc6cyjvFslbL70V2cZ-u9Q5F_r0vpL2hzRUXBaOeL9OjOPstuNMV7_gIPghE6tp1kc-H183DwJ6WhlqqS8Jux8Bdv6FYP_9xUsF2ri3IV13btAuY05klbxWRROg8MZpL3-DSdOX4jEnxql6To");'>
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 p-4">
+                                <h3 class="text-xl font-bold text-white">Salsas y Adobos</h3>
+                            </div>
+                        </div>
+                        <div class="flex flex-1 flex-col p-6">
+                            <p class="mb-4 text-sm text-[#221310]/80 dark:text-[#f8f6f6]/80">Salsas y adobos para
+                                realzar el sabor de tus carnes.</p>
+                            <div class="mt-auto flex items-center justify-between">
+                                <p class="text-lg font-bold text-primary">$5.50/u</p>
+                                <button
+                                    class="rounded bg-primary px-4 py-2 text-sm font-bold text-white transition-opacity hover:opacity-90">Agregar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="bg-background-light dark:bg-background-dark border-t border-primary/20 dark:border-primary/30">
+            <div class="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
+                <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+                    <div class="flex items-center gap-4">
+                        <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+                        </svg>
+                        <p class="text-sm font-medium text-[#221310] dark:text-[#f8f6f6]">© 2025 Templates Market
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+                        <a class="text-sm hover:text-primary" href="/template-carniceria-01/politicas/">Política de Privacidad</a>
+                        <a class="text-sm hover:text-primary" href="/template-carniceria-01/terminos/">Términos de Servicio</a>
+                        <a class="text-sm hover:text-primary" href="/template-carniceria-01/contacto/">Contacto</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+  <script src="../main.js"></script>
+</body>
+
+</html>

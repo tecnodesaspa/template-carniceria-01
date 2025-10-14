@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Carnicería</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d43211",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221310",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Newsreader', serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-background-dark dark:text-background-light">
+    <header
+        class="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-primary/20 bg-background-light/80 px-10 py-3 backdrop-blur-sm dark:bg-background-dark/80">
+        <div class="flex items-center gap-3">
+          <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
+              fill="currentColor"></path>
+          </svg>
+          <h2 class="text-lg font-bold">Carnicería El Rancho</h2>
+        </div>
+        <nav class="hidden items-center gap-8 md:flex" id="navMenu">
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/">Inicio</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/productos/">Productos</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/recetas/">Recetas</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/nosotros/">Nosotros</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/contacto/">Contacto</a>
+        </nav>
+        <button class="md:hidden text-gray-900 dark:text-white" id="btnMenu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+          </svg>
+        </button>
+        <div class="flex items-center gap-4">
+          <a href="/template-carniceria-01/carrito/"
+            class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-primary/10 text-primary/80 transition-colors hover:bg-primary/20 dark:bg-primary/20 dark:text-primary/90 dark:hover:bg-primary/30">
+            <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z">
+              </path>
+            </svg>
+        </a>
+        </div>
+      </header>
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="font-display text-5xl font-bold text-center text-primary mb-4">Política de Privacidad</h1>
+            <p class="text-center text-lg text-background-dark/80 dark:text-background-light/80 mb-12">Última
+                actualización: 1 de agosto de 2024</p>
+            <div class="space-y-10">
+                <section>
+                    <p class="text-lg leading-relaxed text-background-dark/90 dark:text-background-light/90">
+                        En Carnicería El Rancho, valoramos y respetamos su privacidad. Esta Política de Privacidad
+                        describe cómo recopilamos, usamos y protegemos su información personal cuando usted visita
+                        nuestro sitio web o utiliza nuestros servicios. Al acceder a nuestro sitio web o utilizar
+                        nuestros servicios, usted acepta los términos de esta Política de Privacidad.
+                    </p>
+                </section>
+                <section>
+                    <h2 class="font-display text-3xl font-bold text-primary mb-4 border-l-4 border-primary pl-4">
+                        Información que Recopilamos</h2>
+                    <p class="mb-6 text-lg leading-relaxed text-background-dark/90 dark:text-background-light/90">
+                        Podemos recopilar la siguiente información personal cuando usted interactúa con nosotros:</p>
+                    <ul
+                        class="space-y-4 list-disc list-inside text-lg text-background-dark/90 dark:text-background-light/90">
+                        <li><span class="font-semibold">Información de contacto:</span> Nombre, dirección de correo
+                            electrónico, número de teléfono y dirección postal.</li>
+                        <li><span class="font-semibold">Información de pago:</span> Detalles de la tarjeta de crédito o
+                            débito, información de facturación y otros datos necesarios para procesar sus pagos.</li>
+                        <li><span class="font-semibold">Información de la cuenta:</span> Nombre de usuario, contraseña y
+                            otra información de inicio de sesión.</li>
+                        <li><span class="font-semibold">Información de pedidos:</span> Detalles de los productos
+                            comprados, historial de pedidos y preferencias de compra.</li>
+                        <li><span class="font-semibold">Información técnica:</span> Dirección IP, tipo de navegador,
+                            sistema operativo y otra información técnica recopilada automáticamente.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2 class="font-display text-3xl font-bold text-primary mb-4 border-l-4 border-primary pl-4">Cómo
+                        Usamos su Información</h2>
+                    <p class="mb-6 text-lg leading-relaxed text-background-dark/90 dark:text-background-light/90">
+                        Utilizamos su información personal para los siguientes propósitos:</p>
+                    <ul
+                        class="space-y-4 list-disc list-inside text-lg text-background-dark/90 dark:text-background-light/90">
+                        <li>Procesar y completar sus pedidos, incluyendo el envío de productos y la gestión de pagos.
+                        </li>
+                        <li>Comunicarnos con usted sobre sus pedidos, consultas y solicitudes de servicio al cliente.
+                        </li>
+                        <li>Crear y administrar su cuenta, incluyendo la verificación de su identidad y la protección de
+                            su cuenta.</li>
+                        <li>Enviar información sobre nuestros productos, ofertas especiales y promociones, siempre que
+                            usted haya dado su consentimiento.</li>
+                        <li>Mejorar nuestro sitio web y servicios, incluyendo el análisis de datos y la personalización
+                            de su experiencia.</li>
+                        <li>Cumplir con nuestras obligaciones legales y proteger nuestros derechos.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2 class="font-display text-3xl font-bold text-primary mb-4 border-l-4 border-primary pl-4">Cómo
+                        Protegemos su Información</h2>
+                    <p class="mb-6 text-lg leading-relaxed text-background-dark/90 dark:text-background-light/90">
+                        Implementamos medidas de seguridad técnicas y organizativas para proteger su información
+                        personal contra el acceso no autorizado, la pérdida, el uso indebido o la alteración. Estas
+                        medidas incluyen:</p>
+                    <ul
+                        class="space-y-4 list-disc list-inside text-lg text-background-dark/90 dark:text-background-light/90">
+                        <li>Uso de tecnología de encriptación para proteger la información sensible transmitida en
+                            línea.</li>
+                        <li>Restricción del acceso a su información personal a empleados y proveedores de servicios
+                            autorizados.</li>
+                        <li>Implementación de políticas y procedimientos de seguridad para garantizar la protección de
+                            la información.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2 class="font-display text-3xl font-bold text-primary mb-4 border-l-4 border-primary pl-4">
+                        Compartir su Información</h2>
+                    <p class="mb-6 text-lg leading-relaxed text-background-dark/90 dark:text-background-light/90">
+                        Podemos compartir su información personal con terceros en las siguientes circunstancias:</p>
+                    <ul
+                        class="space-y-4 list-disc list-inside text-lg text-background-dark/90 dark:text-background-light/90">
+                        <li><span class="font-semibold">Proveedores de servicios:</span> Compartimos información con
+                            proveedores que nos ayudan a operar nuestro negocio, como procesadores de pagos, empresas de
+                            envío y proveedores de servicios de marketing.</li>
+                        <li><span class="font-semibold">Cumplimiento legal:</span> Podemos divulgar su información si
+                            estamos obligados a hacerlo por ley o en respuesta a una solicitud legal válida.</li>
+                        <li><span class="font-semibold">Protección de derechos:</span> Podemos compartir información
+                            cuando creemos que es necesario para proteger nuestros derechos, propiedad o seguridad, o
+                            los de otros.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2 class="font-display text-3xl font-bold text-primary mb-4 border-l-4 border-primary pl-4">Sus
+                        Derechos</h2>
+                    <p class="mb-6 text-lg leading-relaxed text-background-dark/90 dark:text-background-light/90">Usted
+                        tiene ciertos derechos con respecto a su información personal, incluyendo:</p>
+                    <ul
+                        class="space-y-4 list-disc list-inside text-lg text-background-dark/90 dark:text-background-light/90">
+                        <li><span class="font-semibold">Acceso:</span> Puede solicitar acceso a la información personal
+                            que tenemos sobre usted.</li>
+                        <li><span class="font-semibold">Corrección:</span> Puede solicitar la corrección de información
+                            inexacta o incompleta.</li>
+                        <li><span class="font-semibold">Eliminación:</span> Puede solicitar la eliminación de su
+                            información personal en ciertas circunstancias.</li>
+                        <li><span class="font-semibold">Oposición:</span> Puede oponerse al procesamiento de su
+                            información personal para ciertos fines.</li>
+                        <li><span class="font-semibold">Restricción:</span> Puede solicitar la restricción del
+                            procesamiento de su información personal en ciertas circunstancias.</li>
+                        <li><span class="font-semibold">Portabilidad:</span> Puede solicitar la transferencia de su
+                            información personal a otro proveedor en un formato estructurado y legible por máquina.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2 class="font-display text-3xl font-bold text-primary mb-4 border-l-4 border-primary pl-4">Cambios
+                        a esta Política de Privacidad</h2>
+                    <p class="text-lg leading-relaxed text-background-dark/90 dark:text-background-light/90">
+                        Podemos actualizar esta Política de Privacidad periódicamente para reflejar cambios en nuestras
+                        prácticas de información. Le notificaremos cualquier cambio significativo publicando la nueva
+                        política en nuestro sitio web y actualizando la fecha de vigencia.
+                    </p>
+                </section>
+                <section>
+                    <h2 class="font-display text-3xl font-bold text-primary mb-4 border-l-4 border-primary pl-4">
+                        Contacto</h2>
+                    <p class="text-lg leading-relaxed text-background-dark/90 dark:text-background-light/90">
+                        Si tiene alguna pregunta o inquietud sobre esta Política de Privacidad, por favor contáctenos
+                        en:<br />
+                        Carnicería El Rancho<br />
+                        Calle Falsa 123<br />
+                        Ciudad, Provincia, Código Postal<br />
+                        Correo electrónico: <a class="text-primary hover:underline"
+                            href="mailto:contacto@elgaucho.com">contacto@elgaucho.com</a><br />
+                        Teléfono: <a class="text-primary hover:underline" href="tel:+1234567890">(123) 456-7890</a>
+                    </p>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-primary/5 dark:bg-primary/10 border-t border-primary/20 dark:border-primary/30 mt-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
+            <p class="text-background-dark dark:text-background-light">© 2025 Templates Market. Todos los derechos
+                reservados.</p>
+        </div>
+    </footer>
+  <script src="../main.js"></script>
+</body>
+
+</html>

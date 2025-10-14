@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Carnicería</title>
+  <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#d43211",
+            "background-light": "#f8f6f6",
+            "background-dark": "#221310",
+          },
+          fontFamily: {
+            display: ["Newsreader"],
+          },
+          borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-background-dark dark:text-background-light">
+  <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+    <div class="flex h-full grow flex-col">
+      <header
+        class="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-primary/20 bg-background-light/80 px-10 py-3 backdrop-blur-sm dark:bg-background-dark/80">
+        <div class="flex items-center gap-3">
+          <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
+              fill="currentColor"></path>
+          </svg>
+          <h2 class="text-lg font-bold">Carnicería El Rancho</h2>
+        </div>
+        <nav class="hidden items-center gap-8 md:flex" id="navMenu">
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/">Inicio</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/productos/">Productos</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/recetas/">Recetas</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/nosotros/">Nosotros</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/contacto/">Contacto</a>
+        </nav>
+        <button class="md:hidden text-gray-900 dark:text-white" id="btnMenu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+          </svg>
+        </button>
+        <div class="flex items-center gap-4">
+          <a href="/template-carniceria-01/carrito/"
+            class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-primary/10 text-primary/80 transition-colors hover:bg-primary/20 dark:bg-primary/20 dark:text-primary/90 dark:hover:bg-primary/30">
+            <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z">
+              </path>
+            </svg>
+        </a>
+        </div>
+      </header>
+      <main class="flex flex-1 justify-center px-4 py-8 sm:px-6 lg:px-8">
+        <div class="flex w-full max-w-5xl flex-col gap-12">
+          <section
+            class="relative flex min-h-[480px] w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-cover bg-center p-6 text-center text-white"
+            style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBM6JfTtfql_qXhH75QcQSmU1LA-8Kh_CyTaFrY5denZWSu3Hb3vvU59DOMn7IyL80LOGL9QIxCGFtQ9mlPz6UPc9dYexxJi2dicK4HYpr66U3HNOrSxkV_5jAOmlU-lCKJOx8bOed-ZzMvAl-DG0lC5P5rMxr0Rdb7EGehWu129BqHowVEFbDQ1C16nFVMtEODnIRWEvSF5rdJER1d_9pAetDHc15yV8_dBmX_ub_bOopyLCPhUYyd6mvwXZVyc5T9vV4awQHyOUk");'>
+            <div class="flex max-w-2xl flex-col items-center gap-4">
+              <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">Bienvenido a Carnicería El Rancho</h1>
+              <p class="text-base font-light sm:text-lg">Donde la calidad y la frescura se encuentran en cada corte.
+                Explora nuestra selección de carnes premium, seleccionadas a mano para garantizar el mejor sabor y
+                calidad.</p>
+              <button
+                class="mt-4 flex h-12 cursor-pointer items-center justify-center rounded-lg bg-primary px-6 text-base font-bold text-white shadow-lg transition-transform hover:scale-105">
+                <span class="truncate">Ver Productos</span>
+              </button>
+            </div>
+          </section>
+          <section>
+            <h2 class="px-4 pb-4 pt-5 text-2xl font-bold tracking-tight">Nuestros Productos Estrella</h2>
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              <div class="flex flex-col gap-4 rounded-lg">
+                <div class="aspect-square w-full rounded-lg bg-cover bg-center"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDP3q81HO23opQVIy6tmB8geVZXx3gZG-B7xhFLJMuBgqOjpK0qQCpyuh-P6JOsfKFDu2ZnC5sXm94T6lT4zfplUW9TEY5hmyIUbG4s08Aw03YBl__is3sMqtDQCx097_d2Ea-bGMGVZT22kQ5OHzkQabKU0AaORU-VzrKr5ipl4VMbN-5yb7O3xIqUx_V9_3lywcdxBm5JWiETw5N7QioNAN5gbkJEERNc-4WjIrF9pKAtddNwQ5J6Es1bPwjlwVxE6tQi0nCC4Xw");'>
+                </div>
+                <div>
+                  <h3 class="font-bold">Cortes de Res Premium</h3>
+                  <p class="text-sm text-background-dark/70 dark:text-background-light/70">Selección de los mejores
+                    cortes de res, perfectos para cualquier ocasión.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4 rounded-lg">
+                <div class="aspect-square w-full rounded-lg bg-cover bg-center"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAcTKGRLqe8A7Wz1N2Kxtru7DBOjuOhvjlwXnALyJEG8qitzLl9HzNhn331ZiXHEGYzW065o0eeyEirQGX5Fwo6_hlcsJCI4EBwjAE8kpcEbEMOx9Jn4AesJwSfnidmB1pq9vmkOqOTTRAo4c0dQVpeWZyvcO5QO8Jn1Nz17pBQzs8x_ZnoWTOzf1IHCed9jxi78Dpy7lzqc-bGjfr8uDopsW73Y2azO3lxxWhTnBn_3lmnVXP_yVm7BmaDTcIRXKteMC28Cs8uwVE");'>
+                </div>
+                <div>
+                  <h3 class="font-bold">Costillas de Cerdo</h3>
+                  <p class="text-sm text-background-dark/70 dark:text-background-light/70">Costillas de cerdo marinadas
+                    y listas para asar.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4 rounded-lg">
+                <div class="aspect-square w-full rounded-lg bg-cover bg-center"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDAI1NSZAmeW_f_h3tqxV7aPhJFBgtvYUo2agIjG_UOclY66AiquY4KlkeYhaG7WpcTZAPTIUBu_CHAtwQUo87Qee3cBdeI4MIs4CAiVv7rZEgIuVmYc04BH_8dOsWZ9_LQWlL-G5P9jYt-dciU0IqSeKYuRBwGdutghJTiuH6cEUyompcYmYA_rF-TUE1xvvqsLFYsUWwZnaEjfFcDWcEFxkOpb5OT3Ks4uglLu5V-gJ0CYMv9byJ907yApd5fy18D38_YqFgFBzU");'>
+                </div>
+                <div>
+                  <h3 class="font-bold">Pechugas de Pollo Frescas</h3>
+                  <p class="text-sm text-background-dark/70 dark:text-background-light/70">Pechugas de pollo sin hueso,
+                    ideales para una comida saludable.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4 rounded-lg">
+                <div class="aspect-square w-full rounded-lg bg-cover bg-center"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZrpYy_xzyMk4-HQQoWJ1S_7tM86tipJbXeJsLii4wn9rpeLP642s3UnP5SUrUvFMUrshtshTKCLU_SqvpZ4KzkjnTJyPr9ls-N8-aurzO7z-E7jSiSqBlRERiOo7vdd5BXmxeB6GWuDivvVHSCAh_pI7MULWkcv0B--pzCAcTAITWhvNVqdQ7cynNVqUuTvTnXl3S5VDwWdKhxjrXTg12N_WZ1KWlxNJ301Eb5uvCCgPaUtVnnqX4XY1pfGI-TQzQLBcHxBk2tdQ");'>
+                </div>
+                <div>
+                  <h3 class="font-bold">Embutidos Artesanales</h3>
+                  <p class="text-sm text-background-dark/70 dark:text-background-light/70">Embutidos hechos a mano con
+                    recetas tradicionales.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2 class="px-4 pb-4 pt-5 text-2xl font-bold tracking-tight">Ofertas Especiales</h2>
+            <div
+              class="flex flex-col overflow-hidden rounded-lg bg-background-light shadow-md dark:bg-background-dark/50 md:flex-row">
+              <div class="w-full bg-cover bg-center md:w-1/2"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDks0pSKlMiPOZVn6I7HDiGGIq9nj-Fr83TYjBsFCJOPhYuCp5wY-6qwVSSoyv4A4gbArD9crDn6PGjQ0MEt_xwRwH_mr791NBZ9_Ufw9SVRefRBI-uphPM_0RmmZqngHCiAS4OeaQPebSxNplaAeXpB0M1FsmgRIULXpqMLO7xE4O0Q9USl50UTPzXwgvKN-1N2c7s-Dj9pm7oGETWaiLcVR4cO6gAoUVwi1f5LfTFXrSedz2d8U5rq4TPw7jZZQ2IqMgigaH8IoE"); min-height: 250px;'>
+              </div>
+              <div class="flex w-full flex-col justify-center gap-2 p-6 md:w-1/2">
+                <h3 class="text-xl font-bold">Descuento del 20% en Cortes de Res</h3>
+                <p class="text-background-dark/70 dark:text-background-light/70">Disfruta de un 20% de descuento en
+                  todos los cortes de res premium durante esta semana. No te pierdas esta oportunidad de saborear la
+                  mejor calidad a un precio increíble.</p>
+                <div class="mt-4 flex">
+                  <button
+                    class="flex h-10 cursor-pointer items-center justify-center rounded-lg bg-primary px-5 text-sm font-bold text-white shadow-md transition-transform hover:scale-105">
+                    <span class="truncate">Ver Oferta</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <h2 class="px-4 pb-2 pt-5 text-2xl font-bold tracking-tight">Sobre Nosotros</h2>
+            <p class="px-4 text-background-dark/70 dark:text-background-light/70">En Carnicería El Rancho, nos apasiona
+              ofrecer a nuestros clientes la mejor carne fresca y de calidad. Con años de experiencia, seleccionamos
+              cuidadosamente cada pieza para asegurar que cumpla con nuestros altos estándares. Nuestro compromiso es
+              brindarte productos excepcionales y un servicio amable y personalizado.</p>
+          </section>
+          <section>
+            <h2 class="px-4 pb-4 pt-5 text-2xl font-bold tracking-tight">Testimonios</h2>
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+              <div class="flex flex-col gap-4 rounded-lg bg-background-light p-6 shadow-md dark:bg-background-dark/50">
+                <div class="flex items-center gap-3">
+                  <div class="h-12 w-12 rounded-full bg-cover bg-center"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAtXj4kWSYkYwhAfM2M3Yq2MllTdZjFxoHX1Zew9pweJsRlHyMYHAgVRD8KtOcklofzMRYtQoC5JV6geBG30m50569g5-t5KZmEop-lA7NelzgygKHtAgiDZEj8-SBnRhSz6TQ05qpxa1KeKXVSu4h6Iln5JgMrlWycxLwmXPFfXJBKp9lIxF6RPxasLhptsvWfqEbW2h3abNP0B-3HT9gFMgew7gM9B6wRPLHRHo7dD4HYK7z2Scpw848IaPC6ZXXvcekj2OmRVCo");'>
+                  </div>
+                  <div>
+                    <p class="font-bold">Sofía G.</p>
+                    <p class="text-xs text-background-dark/60 dark:text-background-light/60">Hace 2 semanas</p>
+                  </div>
+                </div>
+                <div class="flex gap-0.5 text-primary">
+                  <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                    </path>
+                  </svg>
+                  <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                    </path>
+                  </svg>
+                  <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                    </path>
+                  </svg>
+                  <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                    </path>
+                  </svg>
+                  <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                    </path>
+                  </svg>
+                </div>
+                <p class="text-background-dark/70 dark:text-background-light/70">La carne es siempre fresca y de
+                  excelente calidad. El personal es muy amable y siempre dispuesto a ayudar.</p>
+              </div>
+              <div class="flex flex-col gap-4 rounded-lg bg-background-light p-6 shadow-md dark:bg-background-dark/50">
+                <div class="flex items-center gap-3">
+                  <div class="h-12 w-12 rounded-full bg-cover bg-center"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDlvppH7aj_mNi9YLW2WqP0Fr5Iv7ZcJ8hzZQUNasSElVeKbumxEFxplYxMXDxHD1IQMhIwMnTExmVHVHn4HK4_vWvivZ9IkKDY8SWOUUxvBNNzjp_Mbsp0YVPC3uQjR8VRZ0OgT3HupWMF4iG15IObIvwV0KIxnJRik1_G9ZJTLURy1oqTF0q05yJ-IqdPCc45l6OPQSv19I26J-4bMtq4U2ZJX7GEVUPgS8kYxHe2n92SDi4Xl_x0H6tWedjQlfGnZ0MzTKeyCtQ");'>
+                  </div>
+                  <div>
+                    <p class="font-bold">Carlos M.</p>
+                    <p class="text-xs text-background-dark/60 dark:text-background-light/60">Hace 1 mes</p>
+                  </div>
+                </div>
+                <div class="flex gap-0.5 text-primary">
+                  <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                    </path>
+                  </svg>
+                  <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                    </path>
+                  </svg>
+                  <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                    </path>
+                  </svg>
+                  <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                    </path>
+                  </svg>
+                  <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                    </path>
+                  </svg>
+                </div>
+                <p class="text-background-dark/70 dark:text-background-light/70">Los mejores cortes de res que he
+                  probado. El sabor es inigualable y la atención es de primera.</p>
+              </div>
+              <div class="flex flex-col gap-4 rounded-lg bg-background-light p-6 shadow-md dark:bg-background-dark/50">
+                <div class="flex items-center gap-3">
+                  <div class="h-12 w-12 rounded-full bg-cover bg-center"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAF4MVQlwVGwJdfm1X-EkhyV-i8Waq61GPHW_dh6k7j0JFMCyz5mauAZkbBL1r0uAI_fjzUJP3rotlw-pOdLLs-1GPFbIELHJVVgyJAtULSmPZeobX-r0qK0HnDYJ22Nd-A1GuNEYUDk699llaNPQ5gTmFYbOD9tMI4yV5FVWOHvVOyUE9qabjMHqaz-3KYXP4gAhNNfqMdvtBMcKw2_M4ntA82YxojehUE6KmpZWHG1aVkiA6tRhw30yBue8cAQVxwl2DjJxwEo5I");'>
+                  </div>
+                  <div>
+                    <p class="font-bold">Ana R.</p>
+                    <p class="text-xs text-background-dark/60 dark:text-background-light/60">Hace 3 meses</p>
+                  </div>
+                </div>
+                <div class="flex gap-0.5 text-primary">
+                  <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                    </path>
+                  </svg>
+                  <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                    </path>
+                  </svg>
+                  <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                    </path>
+                  </svg>
+                  <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M234.5,114.38l-45.1,39.36,13.51,58.6a16,16,0,0,1-23.84,17.34l-51.11-31-51,31a16,16,0,0,1-23.84-17.34L66.61,153.8,21.5,114.38a16,16,0,0,1,9.11-28.06l59.46-5.15,23.21-55.36a15.95,15.95,0,0,1,29.44,0h0L166,81.17l59.44,5.15a16,16,0,0,1,9.11,28.06Z">
+                    </path>
+                  </svg>
+                  <svg class="text-primary/40" fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M239.2,97.29a16,16,0,0,0-13.81-11L166,81.17,142.72,25.81h0a15.95,15.95,0,0,0-29.44,0L90.07,81.17,30.61,86.32a16,16,0,0,0-9.11,28.06L66.61,153.8,53.09,212.34a16,16,0,0,0,23.84,17.34l51-31,51.11,31a16,16,0,0,0,23.84-17.34l-13.51-58.6,45.1-39.36A16,16,0,0,0,239.2,97.29Zm-15.22,5-45.1,39.36a16,16,0,0,0-5.08,15.71L187.35,216v0l-51.07-31a15.9,15.9,0,0,0-16.54,0l-51,31h0L82.2,157.4a16,16,0,0,0-5.08-15.71L32,102.35a.37.37,0,0,1,0-.09l59.44-5.14a16,16,0,0,0,13.35-9.75L128,32.08l23.2,55.29a16,16,0,0,0,13.35,9.75L224,102.26S224,102.32,224,102.33Z">
+                    </path>
+                  </svg>
+                </div>
+                <p class="text-background-dark/70 dark:text-background-light/70">Buena variedad de productos y precios
+                  competitivos. La calidad es buena, aunque a veces hay mucha gente.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <footer class="border-t border-primary/20 bg-background-light dark:bg-background-dark">
+        <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
+          <div class="flex flex-col items-center gap-6 text-center">
+            <div
+              class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-background-dark/70 dark:text-background-light/70">
+              <a class="hover:text-primary" href="/template-carniceria-01/politicas/">Política de Privacidad</a>
+              <a class="hover:text-primary" href="/template-carniceria-01/terminos/">Términos y Condiciones</a>
+              <a class="hover:text-primary" href="/template-carniceria-01/contacto/">Contacto</a>
+            </div>
+            <div class="flex justify-center gap-6 text-background-dark/70 dark:text-background-light/70">
+              <a class="hover:text-primary" href="#">
+                <svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z">
+                  </path>
+                </svg>
+              </a>
+              <a class="hover:text-primary" href="#">
+                <svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z">
+                  </path>
+                </svg>
+              </a>
+            </div>
+            <p class="text-sm text-background-dark/60 dark:text-background-light/60">© 2025 Templates Market. Todos
+              los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="./main.js"></script>
+</body>
+
+</html>

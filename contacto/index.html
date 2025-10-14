@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Carnicería</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#d43211",
+            "background-light": "#f8f6f6",
+            "background-dark": "#221310",
+            "surface-light": "#ffffff",
+            "surface-dark": "#2a1815",
+            "text-light": "#221310",
+            "text-dark": "#f8f6f6",
+            "subtle-light": "#9a594c",
+            "subtle-dark": "#a88e89",
+            "border-light": "#e7d3cf",
+            "border-dark": "#442e2a"
+          },
+          fontFamily: {
+            "display": ["Newsreader", "serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+  <div class="flex flex-col min-h-screen">
+    <header
+        class="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-primary/20 bg-background-light/80 px-10 py-3 backdrop-blur-sm dark:bg-background-dark/80">
+        <div class="flex items-center gap-3">
+          <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
+              fill="currentColor"></path>
+          </svg>
+          <h2 class="text-lg font-bold">Carnicería El Rancho</h2>
+        </div>
+        <nav class="hidden items-center gap-8 md:flex" id="navMenu">
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/">Inicio</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/productos/">Productos</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/recetas/">Recetas</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/nosotros/">Nosotros</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/contacto/">Contacto</a>
+        </nav>
+        <button class="md:hidden text-gray-900 dark:text-white" id="btnMenu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+          </svg>
+        </button>
+        <div class="flex items-center gap-4">
+          <a href="/template-carniceria-01/carrito/"
+            class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-primary/10 text-primary/80 transition-colors hover:bg-primary/20 dark:bg-primary/20 dark:text-primary/90 dark:hover:bg-primary/30">
+            <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z">
+              </path>
+            </svg>
+        </a>
+        </div>
+      </header>
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-5xl font-bold tracking-tight">Contacto</h2>
+          <p class="mt-4 text-lg text-subtle-light dark:text-subtle-dark max-w-2xl mx-auto">Visítanos en nuestra tienda
+            o contáctanos por teléfono o correo electrónico. Estamos aquí para ayudarte con tus necesidades de carne.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div class="bg-surface-light dark:bg-surface-dark p-8 rounded-lg">
+            <h3 class="text-2xl font-bold mb-6">Información de Contacto</h3>
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-primary mt-1">location_on</span>
+                <div>
+                  <h4 class="font-bold text-text-light dark:text-text-dark">Dirección</h4>
+                  <p class="text-subtle-light dark:text-subtle-dark">Calle Principal 123, Ciudad, Provincia, Código
+                    Postal</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-primary mt-1">call</span>
+                <div>
+                  <h4 class="font-bold text-text-light dark:text-text-dark">Teléfono</h4>
+                  <p class="text-subtle-light dark:text-subtle-dark">+1 (555) 123-4567</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-primary mt-1">schedule</span>
+                <div>
+                  <h4 class="font-bold text-text-light dark:text-text-dark">Horario de Apertura</h4>
+                  <p class="text-subtle-light dark:text-subtle-dark">Lunes a Viernes: 9:00 AM - 7:00 PM<br />Sábados:
+                    9:00 AM - 5:00 PM<br />Domingos: Cerrado</p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-8 rounded-lg overflow-hidden aspect-w-16 aspect-h-9">
+              <div class="w-full h-full bg-center bg-no-repeat bg-cover"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBXVcm9Qa-4CGMjq5DY7wgvsQF--HTMzGgi-wsnmr8YHWn-MpMnOAOOuN05lBwB_sWzPWNzVlbDnzHZdWaB8kJD4vTAJnV-Vfs2Md3yUt1foI8MLvtwb2UvtTXG2ooQDinAmoSEI2qpbqk_uiIkbuvdr4x9Q4U_ZAJr4DfAtOHWvQU4qxFWOkfP7Qh5GBuY0ePR_g6_teM8JtADtsjT01xvEkJrT0o7rZV_ZhJ9AGVevm7GQ_Kek9PdQ2zM3gnwwnKfAzpoD72fCIA");'>
+              </div>
+            </div>
+          </div>
+          <div class="bg-surface-light dark:bg-surface-dark p-8 rounded-lg">
+            <h3 class="text-2xl font-bold mb-6">Envíanos un Mensaje</h3>
+            <form class="space-y-6">
+              <div>
+                <label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark"
+                  for="name">Nombre</label>
+                <div class="mt-1">
+                  <input
+                    class="form-input w-full bg-background-light dark:bg-background-dark border-border-light dark:border-border-dark rounded-md focus:ring-primary focus:border-primary text-text-light dark:text-text-dark placeholder-subtle-light dark:placeholder-subtle-dark"
+                    id="name" name="name" placeholder="Tu nombre" type="text" />
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark" for="email">Correo
+                  Electrónico</label>
+                <div class="mt-1">
+                  <input
+                    class="form-input w-full bg-background-light dark:bg-background-dark border-border-light dark:border-border-dark rounded-md focus:ring-primary focus:border-primary text-text-light dark:text-text-dark placeholder-subtle-light dark:placeholder-subtle-dark"
+                    id="email" name="email" placeholder="Tu correo electrónico" type="email" />
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-subtle-light dark:text-subtle-dark"
+                  for="message">Mensaje</label>
+                <div class="mt-1">
+                  <textarea
+                    class="form-textarea w-full bg-background-light dark:bg-background-dark border-border-light dark:border-border-dark rounded-md focus:ring-primary focus:border-primary text-text-light dark:text-text-dark placeholder-subtle-light dark:placeholder-subtle-dark"
+                    id="message" name="message" placeholder="Tu mensaje" rows="4"></textarea>
+                </div>
+              </div>
+              <div>
+                <button
+                  class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-offset-background-light dark:focus:ring-offset-background-dark"
+                  type="submit">
+                  Enviar Mensaje
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-surface-light dark:bg-surface-dark border-t border-border-light dark:border-border-dark">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="flex flex-col items-center">
+          <div class="flex items-center gap-3 mb-4">
+            <svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+            </svg>
+            <h1 class="text-2xl font-bold text-text-light dark:text-text-dark">Carnicería El Rancho</h1>
+          </div>
+          <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 my-6">
+            <a class="text-subtle-light dark:text-subtle-dark hover:text-primary dark:hover:text-primary transition-colors"
+              href="/template-carniceria-01/">Inicio</a>
+            <a class="text-subtle-light dark:text-subtle-dark hover:text-primary dark:hover:text-primary transition-colors"
+              href="/template-carniceria-01/productos/">Productos</a>
+            <a class="text-subtle-light dark:text-subtle-dark hover:text-primary dark:hover:text-primary transition-colors"
+              href="/template-carniceria-01/recetas/">Recetas</a>
+            <a class="text-subtle-light dark:text-subtle-dark hover:text-primary dark:hover:text-primary transition-colors"
+              href="/template-carniceria-01/nosotros/">Nosotros</a>
+            <a class="text-subtle-light dark:text-subtle-dark hover:text-primary dark:hover:text-primary transition-colors"
+              href="/template-carniceria-01/contacto/">Contacto</a>
+          </div>
+          <p class="text-sm text-subtle-light dark:text-subtle-dark">© 2025 Templates Market. Todos los derechos
+            reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+</body>
+
+</html>

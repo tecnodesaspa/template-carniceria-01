@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Carnicería</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#d43211",
+            "background-light": "#f8f6f6",
+            "background-dark": "#221310",
+            "foreground-light": "#1b100d",
+            "foreground-dark": "#f8f6f6",
+            "subtle-light": "#9a594c",
+            "subtle-dark": "#a18e8a",
+            "border-light": "#e7d3cf",
+            "border-dark": "#443532"
+          },
+          fontFamily: {
+            "display": ["Newsreader", "serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-foreground-light dark:text-foreground-dark">
+  <div class="flex flex-col min-h-screen">
+    <header class="border-b border-border-light dark:border-border-dark">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <div class="flex items-center gap-6">
+            <a class="flex items-center gap-2 text-xl font-bold" href="#">
+              <svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+              </svg>
+              Carnicería El Rancho
+            </a>
+            <nav class="hidden md:flex items-center gap-6">
+              <a class="text-sm font-medium hover:text-primary" href="#">Inicio</a>
+              <a class="text-sm font-medium text-primary" href="#">Productos</a>
+              <a class="text-sm font-medium hover:text-primary" href="#">Ofertas</a>
+              <a class="text-sm font-medium hover:text-primary" href="#">Nosotros</a>
+              <a class="text-sm font-medium hover:text-primary" href="#">Contacto</a>
+            </nav>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="relative hidden md:block">
+              <span
+                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-subtle-light dark:text-subtle-dark">search</span>
+              <input
+                class="bg-background-light dark:bg-background-dark border border-border-light dark:border-border-dark rounded-full w-48 pl-10 pr-4 py-2 text-sm focus:ring-primary focus:border-primary"
+                placeholder="Buscar cortes..." type="text" />
+            </div>
+            <button class="p-2 rounded-full hover:bg-primary/10">
+              <span class="material-symbols-outlined">favorite</span>
+            </button>
+            <button class="relative p-2 rounded-full hover:bg-primary/10">
+              <span class="material-symbols-outlined">shopping_cart</span>
+              <span
+                class="absolute -top-1 -right-1 bg-primary text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="flex items-center text-sm mb-8">
+        <a class="text-subtle-light dark:text-subtle-dark hover:text-primary" href="#">Productos</a>
+        <span class="mx-2 text-subtle-light dark:text-subtle-dark">/</span>
+        <span class="font-medium">Cortes de Res</span>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div>
+          <div class="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
+            <img alt="Ribeye Premium" class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY9avhSajcEVguh4ocQKKHXya9cdxKQWkbfCwEc9zKF18l3YRqjVtuiG7oxEqRwFh9jBCEpEQjd47M6JzImnduHbWI35Wz14-Z7D9Ea2MyLbbqUuERpZdCnW8ta6NaS9l5AeNh7nvDmr3yWACCL2McysUnZimAjCgXMXRjNQFKnCiisL4byWwRA8mBKF4acOxg7kav0kX0jlWe7cVjIITdmfUtwY59nzBHvdg6dgW5Tp5DowQWBhpUxsveHcmL7U8CIJvKZSMsUt0" />
+          </div>
+        </div>
+        <div>
+          <h1 class="text-4xl font-bold tracking-tight">Ribeye Premium</h1>
+          <p class="mt-4 text-lg text-subtle-light dark:text-subtle-dark">El Ribeye Premium es un corte de res de alta
+            calidad, conocido por su marmoleo excepcional y sabor intenso. Perfecto para asar a la parrilla o cocinar a
+            la sartén.</p>
+          <div class="mt-6">
+            <p class="text-3xl font-bold">$25.99 <span
+                class="text-lg font-medium text-subtle-light dark:text-subtle-dark">/ kg</span></p>
+          </div>
+          <div class="mt-8">
+            <h2 class="text-xl font-bold">Descripción</h2>
+            <p class="mt-2 text-subtle-light dark:text-subtle-dark">Nuestro Ribeye Premium proviene de ganado
+              seleccionado, criado en pastizales y alimentado con granos para asegurar la mejor calidad y sabor. Cada
+              corte es cuidadosamente seleccionado y preparado por nuestros carniceros expertos.</p>
+          </div>
+          <div class="mt-8">
+            <h2 class="text-xl font-bold">Información Nutricional (por 100g)</h2>
+            <div class="mt-4 border-t border-border-light dark:border-border-dark">
+              <dl class="divide-y divide-border-light dark:divide-border-dark">
+                <div class="py-3 grid grid-cols-3 gap-4 text-sm">
+                  <dt class="font-medium text-subtle-light dark:text-subtle-dark">Calorías</dt>
+                  <dd class="col-span-2">250 kcal</dd>
+                </div>
+                <div class="py-3 grid grid-cols-3 gap-4 text-sm">
+                  <dt class="font-medium text-subtle-light dark:text-subtle-dark">Grasas</dt>
+                  <dd class="col-span-2">18g</dd>
+                </div>
+                <div class="py-3 grid grid-cols-3 gap-4 text-sm">
+                  <dt class="font-medium text-subtle-light dark:text-subtle-dark">Proteínas</dt>
+                  <dd class="col-span-2">20g</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+          <div class="mt-8">
+            <h2 class="text-xl font-bold mb-2">Cantidad</h2>
+            <div class="flex items-center gap-4">
+              <div class="flex items-center border border-border-light dark:border-border-dark rounded-full">
+                <button class="p-2 rounded-l-full hover:bg-primary/10 disabled:opacity-50" disabled=""><span
+                    class="material-symbols-outlined text-xl">remove</span></button>
+                <input class="w-16 text-center bg-transparent border-0 focus:ring-0" type="text" value="1.0" />
+                <span class="text-sm text-subtle-light dark:text-subtle-dark pr-2">kg</span>
+                <button class="p-2 rounded-r-full hover:bg-primary/10"><span
+                    class="material-symbols-outlined text-xl">add</span></button>
+              </div>
+              <button
+                class="flex-1 bg-primary text-white font-bold py-3 px-6 rounded-full hover:bg-opacity-90 transition-colors">Añadir
+                al Carrito</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-16">
+        <h2 class="text-2xl font-bold mb-6">Reseñas de Clientes</h2>
+        <div class="space-y-8">
+          <div class="flex gap-4">
+            <img alt="Carlos M." class="h-12 w-12 rounded-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMywuygqCOyR9c9RtBoRJovpj1zPl7kEoOIszrBHzRqNnw46YNdAWWUKuGLuLHPzR4hw6sCZvTo749tCdW89jCDLOp4Kiz-Fr5UuJrJWqLWE0mlkOBsuE3yhlk-noH35plAScbZExWZpeHKjHEifq4mYjRthxz8SOjjDQxvnAXCD1EXgF_2xcJ_r5vVLht1a0tk4mO0WQGbASfs9uvhpJM5arXYliE760bFNI93Bo5v2LxhKei-4e0v_IzUe0nuCEhkK_XDny2zUo" />
+            <div>
+              <div class="flex items-center gap-2">
+                <h3 class="font-bold">Carlos M.</h3>
+                <p class="text-sm text-subtle-light dark:text-subtle-dark">15 de mayo de 2024</p>
+              </div>
+              <div class="flex items-center mt-1">
+                <span class="material-symbols-outlined text-primary"
+                  style="font-variation-settings: 'FILL' 1">star</span>
+                <span class="material-symbols-outlined text-primary"
+                  style="font-variation-settings: 'FILL' 1">star</span>
+                <span class="material-symbols-outlined text-primary"
+                  style="font-variation-settings: 'FILL' 1">star</span>
+                <span class="material-symbols-outlined text-primary"
+                  style="font-variation-settings: 'FILL' 1">star</span>
+                <span class="material-symbols-outlined text-primary"
+                  style="font-variation-settings: 'FILL' 1">star</span>
+              </div>
+              <p class="mt-2 text-subtle-light dark:text-subtle-dark">Excelente calidad y sabor. El mejor ribeye que he
+                probado.</p>
+            </div>
+          </div>
+          <div class="border-t border-border-light dark:border-border-dark my-8"></div>
+          <div class="flex gap-4">
+            <img alt="Sofía R." class="h-12 w-12 rounded-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsCGx8lNFBvWVkUuIR1y87IaXIpe9P7FUh8otjsE5zxHhPYt1947IXLNe1lILI8eeVC6O9akE0VhCBIexHewI0EewHQMfVc1MPfgfjqY7GxOENm5Ck88jzxd8_8arySPpPoH_sPOl5KQDsvbpIF6-kAortBzkczTvbJOyqZt6thG-UPvtQLAy87TRmnTH0ACV7lXtFzhDYTWgelyS-JYnaogeZ16vQPjmXFZI-wWK2t3dOSOW7Lk8rMuRJWqZXLLdtsyS3GU7YCD4" />
+            <div>
+              <div class="flex items-center gap-2">
+                <h3 class="font-bold">Sofía R.</h3>
+                <p class="text-sm text-subtle-light dark:text-subtle-dark">20 de abril de 2024</p>
+              </div>
+              <div class="flex items-center mt-1">
+                <span class="material-symbols-outlined text-primary"
+                  style="font-variation-settings: 'FILL' 1">star</span>
+                <span class="material-symbols-outlined text-primary"
+                  style="font-variation-settings: 'FILL' 1">star</span>
+                <span class="material-symbols-outlined text-primary"
+                  style="font-variation-settings: 'FILL' 1">star</span>
+                <span class="material-symbols-outlined text-primary"
+                  style="font-variation-settings: 'FILL' 1">star</span>
+                <span class="material-symbols-outlined text-subtle-light dark:text-subtle-dark">star</span>
+              </div>
+              <p class="mt-2 text-subtle-light dark:text-subtle-dark">Muy bueno, aunque un poco caro. La carne es muy
+                tierna.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-background-light dark:bg-background-dark border-t border-border-light dark:border-border-dark">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+          <div>
+            <h3 class="font-bold text-lg">Carnicería El Rancho</h3>
+            <p class="mt-2 text-sm text-subtle-light dark:text-subtle-dark">La mejor carne, desde 1985.</p>
+          </div>
+          <div class="flex justify-center md:justify-start gap-6">
+            <a class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary" href="#">Política de
+              Privacidad</a>
+            <a class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary" href="#">Términos</a>
+            <a class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary" href="#">Envíos</a>
+          </div>
+          <div class="flex items-center justify-center md:justify-end gap-4">
+            <a class="text-subtle-light dark:text-subtle-dark hover:text-primary" href="#"><svg class="h-6 w-6"
+                fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.17 11.43h-2.3v7.32h-3.2v-7.32H8.5V9.1h1.17V7.5c0-1.12.54-2.85 2.85-2.85h1.93v2.33h-1.16c-.57 0-.7.27-.7.73v1.39h1.92l-.25 2.33z">
+                </path>
+              </svg></a>
+            <a class="text-subtle-light dark:text-subtle-dark hover:text-primary" href="#"><svg class="h-6 w-6"
+                fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5.24 7.64c.02 1.63-1.24 3.52-3.48 3.52-1.07 0-1.92-.31-2.69-.79.15.02.3.03.46.03.89 0 1.7-.3 2.36-.81-1.68-.03-3.1-1.14-3.59-2.67.23.04.47.07.72.07.35 0 .69-.05.9-.15-1.75-.35-3.07-1.9-3.07-3.76v-.05c.51.28 1.1.45 1.73.48-1.03-.69-1.7-1.86-1.7-3.18 0-.7.19-1.35.52-1.91 1.88 2.3 4.69 3.81 7.8 3.96-.06-.29-.1-.58-.1-.88 0-2.12 1.72-3.84 3.84-3.84.89 0 1.7.38 2.26 1 .7-.14 1.36-.39 1.96-.75-.23.72-.72 1.33-1.36 1.72.62-.07 1.22-.24 1.77-.48-.42.62-.95 1.17-1.58 1.64z">
+                </path>
+              </svg></a>
+            <a class="text-subtle-light dark:text-subtle-dark hover:text-primary" href="#"><svg class="h-6 w-6"
+                fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2C8.74 2 8.28 2.03 7.03 2.09c-1.25.06-2.1.28-2.87.58-.78.3-1.46.78-2.05 1.38s-1.08 1.27-1.38 2.05c-.3.77-.52 1.62-.58 2.87C2.03 8.28 2 8.74 2 12s.03 3.72.09 4.97c.06 1.25.28 2.1.58 2.87.3.78.78 1.46 1.38 2.05s1.27 1.08 2.05 1.38c.77.3 1.62.52 2.87.58 1.25.06 1.71.09 4.97.09s3.72-.03 4.97-.09c1.25-.06 2.1-.28 2.87-.58.78-.3 1.46-.78 2.05-1.38s1.08-1.27 1.38-2.05c.3-.77.52-1.62.58-2.87.06-1.25.09-1.71.09-4.97s-.03-3.72-.09-4.97c-.06-1.25-.28-2.1-.58-2.87-.3-.78-.78-1.46-1.38-2.05S20.05 3.01 19.27 2.7c-.77-.3-1.62-.52-2.87-.58C15.72 2.03 15.26 2 12 2zm0 1.8c3.2 0 3.58.01 4.84.07 1.17.05 1.8.27 2.2.42.53.2.89.47 1.28.87.4.4.67.75.87 1.28.15.4.37.93.42 2.1.06 1.26.07 1.64.07 4.84s-.01 3.58-.07 4.84c-.05 1.17-.27 1.8-.42 2.2-.2.53-.47.89-.87 1.28-.4.4-.75.67-1.28.87-.4.15-.93.37-2.1.42-1.26.06-1.64.07-4.84.07s-3.58-.01-4.84-.07c-1.17-.05-1.8-.27-2.2-.42-.53-.2-.89-.47-1.28-.87-.4-.4-.67-.75-.87-1.28-.15-.4-.37-.93-.42-2.1-.06-1.26-.07-1.64-.07-4.84s.01-3.58.07-4.84c.05-1.17.27-1.8.42-2.2.2-.53.47-.89.87-1.28.4-.4.75-.67 1.28-.87.4-.15.93-.37 2.1-.42C8.42 3.81 8.8 3.8 12 3.8zm0 4.35c-2.43 0-4.38 1.96-4.38 4.38s1.96 4.38 4.38 4.38 4.38-1.96 4.38-4.38-1.95-4.38-4.38-4.38zm0 7.22c-1.57 0-2.85-1.28-2.85-2.85s1.28-2.85 2.85-2.85 2.85 1.28 2.85 2.85-1.28 2.85-2.85 2.85zm6.32-8.3c-.63 0-1.13.51-1.13 1.13s.51 1.13 1.13 1.13 1.13-.51 1.13-1.13-.5-1.13-1.13-1.13z">
+                </path>
+              </svg></a>
+          </div>
+        </div>
+        <div
+          class="mt-8 pt-8 border-t border-border-light dark:border-border-dark text-center text-sm text-subtle-light dark:text-subtle-dark">
+          <p>© 2025 Templates Market. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="../main.js"></script>
+</body>
+
+</html>

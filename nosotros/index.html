@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Carnicería</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#d43211",
+            "background-light": "#f8f6f6",
+            "background-dark": "#221310",
+          },
+          fontFamily: {
+            display: ["Newsreader"],
+          },
+          borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+        },
+      },
+    };
+  </script>
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark text-black dark:text-white">
+    <div class="relative flex min-h-screen w-full flex-col">
+        <header
+        class="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-primary/20 bg-background-light/80 px-10 py-3 backdrop-blur-sm dark:bg-background-dark/80">
+        <div class="flex items-center gap-3">
+          <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
+              fill="currentColor"></path>
+          </svg>
+          <h2 class="text-lg font-bold">Carnicería El Rancho</h2>
+        </div>
+        <nav class="hidden items-center gap-8 md:flex" id="navMenu">
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/">Inicio</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/productos/">Productos</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/recetas/">Recetas</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/nosotros/">Nosotros</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/contacto/">Contacto</a>
+        </nav>
+        <button class="md:hidden text-gray-900 dark:text-white" id="btnMenu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+          </svg>
+        </button>
+        <div class="flex items-center gap-4">
+          <a href="/template-carniceria-01/carrito/"
+            class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-primary/10 text-primary/80 transition-colors hover:bg-primary/20 dark:bg-primary/20 dark:text-primary/90 dark:hover:bg-primary/30">
+            <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z">
+              </path>
+            </svg>
+        </a>
+        </div>
+      </header>
+        <main class="flex flex-1 justify-center py-12 px-4 sm:px-6 lg:px-8">
+            <div class="w-full max-w-4xl space-y-12">
+                <div class="text-center">
+                    <p class="text-sm font-semibold uppercase tracking-wider text-primary">Nuestra Historia</p>
+                    <h2 class="mt-2 text-4xl font-bold tracking-tight sm:text-5xl">Sobre Nosotros</h2>
+                    <p class="mt-6 max-w-2xl mx-auto text-lg leading-8 text-black/70 dark:text-white/70">
+                        En Carnicería El Rancho, nuestra historia comienza con una pasión por la carne de calidad y un
+                        compromiso con la excelencia. Fundada hace más de tres décadas por la familia Rodríguez, nuestra
+                        carnicería ha sido un pilar en la comunidad, ofreciendo productos frescos y de la más alta
+                        calidad.
+                    </p>
+                </div>
+                <div class="space-y-10">
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-bold tracking-tight text-center">Nuestra Filosofía</h3>
+                        <p class="text-lg leading-8 text-black/70 dark:text-white/70">
+                            Creemos en la importancia de la procedencia y el bienestar animal. Trabajamos directamente
+                            con granjas locales que comparten nuestros valores, asegurando que cada corte provenga de
+                            animales criados en condiciones óptimas y alimentados de forma natural. Esta dedicación se
+                            refleja en el sabor y la calidad de nuestros productos.
+                        </p>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-bold tracking-tight text-center">Nuestro Compromiso</h3>
+                        <p class="text-lg leading-8 text-black/70 dark:text-white/70">
+                            En Carnicería El Rancho, nos esforzamos por ofrecer una experiencia excepcional a nuestros
+                            clientes. Desde la selección cuidadosa de cada pieza hasta el servicio personalizado de
+                            nuestro equipo, cada detalle está pensado para satisfacer a los paladares más exigentes.
+                            Nuestro compromiso es con la calidad, la frescura y la satisfacción total de nuestros
+                            clientes.
+                        </p>
+                    </div>
+                </div>
+                <div class="space-y-8">
+                    <h3 class="text-2xl font-bold tracking-tight text-center">Conoce a Nuestro Equipo</h3>
+                    <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+                        <div class="flex flex-col items-center gap-4 text-center">
+                            <div class="relative h-40 w-40">
+                                <div class="h-full w-full rounded-full bg-cover bg-center"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBIAY72pBvxc0oyhweOq9PVGjx6VrEKv5u8IcUX-Akw-Ju1eH81G0zSWC3LxjcRuWA8P7XpyzG5cxhS6dRXWs3sJ7_FceQnKE33BKrCL_ze8rKVtICOAKEi4QP_-Q1vhT-0PNQ-d8Ih1gsTzYWeOdIdIc02DOGNtXCK3q-YbkI5TBqInZIdgqEmTujzEMxuFGddCrSLZEh5riOAVlu9JM3k-yc0z6l02ojW8rXi-MfEHHWWQbMth-YGg7ii__0F26S9ksdyTpRe6zQ");'>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-lg font-medium">Carlos Rodríguez</p>
+                                <p class="text-primary">Fundador y Maestro Carnicero</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center gap-4 text-center">
+                            <div class="relative h-40 w-40">
+                                <div class="h-full w-full rounded-full bg-cover bg-center"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuColtTRa4mUMpJpUqsNY8XEjm5cQKcFU5j_HCGeUWwnnNfcqHQNO9Xk9DBnf6vrn4Ptespkpam4Ng669XERaEx6sV4VIVgSfuG4E_LPP0c5b52lvKdKk1SMD8z531S1Xz9EWVeTyW6UYDaswCQVPNQwzioQdMhL9yD5VnFYKAE0PLNyR_VsjG-bgXexWQUB7CRApGKw-50AsqQowidJ_Ehb-XeSWyMHJ_lh-jR79LqoytG22WDUwvpwp0llYGZ4hCDBGo7mJblcdUI");'>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-lg font-medium">Sofía García</p>
+                                <p class="text-primary">Gerente de Operaciones</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center gap-4 text-center">
+                            <div class="relative h-40 w-40">
+                                <div class="h-full w-full rounded-full bg-cover bg-center"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAM6bn3iCWpUQD9-figOw-Nfqt9bIWttA2uwfd8dNSj5qIoeTLOVhfB3jZ34RM89NBG-Kb3N6ADRWzTzr71bVfb6SWdSK3AKuRWyFVMwHIY4j8Kym3A6ocqFj5_G8Xl6z5gq-bEsMnidx1KQS3kAFnO1cY2eY1YfDA4LUtE9jfMD0h_7Xt0gvI63TV4CqgmdpDcKhe1S48wQldbLOF9OloFWQkjBH8rJYjGjXZfl8Je2jy8l_BewV_9dqOAhR7TmIcTPPx9hDnVIfQ");'>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-lg font-medium">Javier López</p>
+                                <p class="text-primary">Especialista en Cortes Premium</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-4 text-center">
+                    <h3 class="text-2xl font-bold tracking-tight">Visítanos</h3>
+                    <p class="mx-auto max-w-3xl text-lg leading-8 text-black/70 dark:text-white/70">
+                        Te invitamos a visitar nuestra carnicería y descubrir la diferencia que marca la calidad y la
+                        pasión por la carne. Nuestro equipo estará encantado de asesorarte y ayudarte a encontrar los
+                        cortes perfectos para tus comidas.
+                    </p>
+                    <div class="pt-4">
+                        <div class="aspect-w-16 aspect-h-9 w-full overflow-hidden rounded-lg shadow-lg">
+                            <div class="h-full w-full bg-cover bg-center"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBZawFYc-jlQTPxVw_FwiXIofFAoop7J761HSmuQWdp_NPk-aLap4UUhMhFhJwBI4k-8kSEwo2nZwDD4tqs3YJ-LhefaxKTYDUKfrzbFFESnsPRlDxiHqb7UX7hShnN0wcp889_JDNjQ-a2ZEdC2cAMy1asRYizwMT44eUApwhjmbi0KSnNnhvkkSQhrPq2RJCSTE6cXGLTGfYmNvIY5JbN7O_HJfJYeyBNvgJfAEyqOSEYKnLFphihScNjNCMttXJmzN-Z_AZhBWU");'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+  <script src="../main.js"></script>
+</body>
+
+</html>

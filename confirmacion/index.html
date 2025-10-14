@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Carnicería</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d43211",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221310",
+                    },
+                    fontFamily: {
+                        "display": ["Newsreader"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .custom-icon-color {
+            color: #221310;
+        }
+
+        .dark .custom-icon-color {
+            color: #f8f6f6;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-[#221310] dark:text-[#f8f6f6]">
+    <div class="relative flex min-h-screen w-full flex-col">
+        <header class="border-b border-primary/20 dark:border-primary/30">
+            <div
+                class="container mx-auto flex items-center justify-between whitespace-nowrap px-4 py-4 sm:px-6 lg:px-8">
+                <div class="flex items-center gap-4">
+                    <svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+                    </svg>
+                    <h1 class="text-2xl font-bold text-[#221310] dark:text-[#f8f6f6]">Carnicería El Rancho</h1>
+                </div>
+                <nav class="hidden items-center gap-8 md:flex">
+                    <a class="text-sm font-medium hover:text-primary" href="#">Inicio</a>
+                    <a class="text-sm font-medium hover:text-primary" href="#">Productos</a>
+                    <a class="text-sm font-medium hover:text-primary" href="#">Nosotros</a>
+                    <a class="text-sm font-medium hover:text-primary" href="#">Contacto</a>
+                </nav>
+                <div class="flex items-center gap-2">
+                    <button
+                        class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-primary/10 text-primary/80 transition-colors hover:bg-primary/20 dark:bg-primary/20 dark:text-primary/90 dark:hover:bg-primary/30">
+                        <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button
+                        class="relative flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-primary/10 text-primary/80 transition-colors hover:bg-primary/20 dark:bg-primary/20 dark:text-primary/90 dark:hover:bg-primary/30">
+                        <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z">
+                            </path>
+                        </svg>
+                        <span
+                            class="absolute top-0 right-0 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">3</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="flex-grow">
+            <div class="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
+                <div class="mx-auto max-w-4xl text-center">
+                    <div class="mb-8 flex justify-center">
+                        <svg class="h-16 w-16 text-green-500" fill="none" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                    </div>
+                    <h2 class="text-4xl font-bold tracking-tight text-[#221310] dark:text-[#f8f6f6] sm:text-5xl">
+                        ¡Gracias! Tu pedido ha sido recibido.</h2>
+                    <p class="mt-4 text-lg text-[#221310]/70 dark:text-[#f8f6f6]/70">Recibirás una confirmación por
+                        correo electrónico en breve.</p>
+                </div>
+                <div
+                    class="mx-auto mt-12 max-w-5xl rounded-lg border border-primary/20 bg-white/5 p-8 shadow-lg dark:border-primary/30 dark:bg-black/10">
+                    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4">
+                        <div>
+                            <p class="text-sm text-[#221310]/70 dark:text-[#f8f6f6]/70">Número de pedido</p>
+                            <p class="font-bold">#15897</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-[#221310]/70 dark:text-[#f8f6f6]/70">Fecha</p>
+                            <p class="font-bold">23 de Julio, 2025</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-[#221310]/70 dark:text-[#f8f6f6]/70">Total</p>
+                            <p class="font-bold">$60.35</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-[#221310]/70 dark:text-[#f8f6f6]/70">Método de pago</p>
+                            <p class="font-bold">Tarjeta de Crédito</p>
+                        </div>
+                    </div>
+                    <div class="mt-8 border-t border-primary/20 pt-8 dark:border-primary/30">
+                        <h3 class="text-2xl font-bold">Detalles del pedido</h3>
+                        <div class="mt-6 flow-root">
+                            <ul class="-my-6 divide-y divide-primary/20 dark:divide-primary/30">
+                                <li class="flex py-6">
+                                    <div
+                                        class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                        <img alt="Corte de Res Premium" class="h-full w-full object-cover object-center"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRWc5SX7Zam5stve7Ek37FXOpyw4tCjIimlG3VaeBSR1Q4EfzFIdRuB1vMTa8vP2P118q6et3JVDpx4m076gLHhSzPVH51GtxDZ9s81ZQI9Ye2uZvnrSUsz6aycdTm0SiVSOwLfnfIKTubXuA1xUHHfbiyUhiIAArU0o4oHrW0Q36leDgxEF_RZFpi3yYToCZsroLWlk2LDH_ZHzlTreIuJimA1LygD56Aj5cwvTCUlRhE-xBgvpYY1aTG88JcXTfk3VXVYkhpZtc" />
+                                    </div>
+                                    <div class="ml-4 flex flex-1 flex-col">
+                                        <div>
+                                            <div class="flex justify-between text-base font-medium">
+                                                <h3>Corte de Res Premium</h3>
+                                                <p class="ml-4">$25.99</p>
+                                            </div>
+                                            <p class="mt-1 text-sm text-[#221310]/70 dark:text-[#f8f6f6]/70">1 kg</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="flex py-6">
+                                    <div
+                                        class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                        <img alt="Cerdo Ibérico" class="h-full w-full object-cover object-center"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGvL9YoZK98IT2GepC6XtWB8myLLIGINd2dcuqmnP9DmoP4YMAVB40nRj9mTPvuui7bK5oHocuKCjhDfdMCJu2JUXzGgsK6d0aKwoSTXlqxKg8xJMVfo_YIM9z_P0M7mBbX3SQsUYM1UPBp31KKH8LGaLNz4n07_J3zn-kfiFeXrVMEoQ3zlB2x6btvnldEMU642dZUCP0I-rRcfbceW7p2Vr17qI2yfNjTGLMFlzU3M4Lmgp7D62RMoZIeY3Cc-Kyc4eDsC20H3k" />
+                                    </div>
+                                    <div class="ml-4 flex flex-1 flex-col">
+                                        <div>
+                                            <div class="flex justify-between text-base font-medium">
+                                                <h3>Cerdo Ibérico</h3>
+                                                <p class="ml-4">$9.38</p>
+                                            </div>
+                                            <p class="mt-1 text-sm text-[#221310]/70 dark:text-[#f8f6f6]/70">0.5 kg</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="flex py-6">
+                                    <div
+                                        class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                                        <img alt="Embutidos Artesanales"
+                                            class="h-full w-full object-cover object-center"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL7qOX5CLLNKFpbylKfyKmgex9_htSWZlzFvw3kTQbVxAZjPik_DxwiwPadxJvSk6sMC6RGPhrL1hzhVgedzCuyGy37PtDLyuxKtggtic7pq_VXJVUOQZsIXFGph8Kl35dYNjb81uOPFs1-6r5lOrpcQhLp8_kI-L1GX8rfCJFG1oiRuMHIYJhamFIDm33MOOG7qJaeydivSE8aDkCW-mQtbfC9eyXUg57kVHGx5ku3rOiKoWoTU4Fgzgj_B8fuKMivFXp0VOPss0" />
+                                    </div>
+                                    <div class="ml-4 flex flex-1 flex-col">
+                                        <div>
+                                            <div class="flex justify-between text-base font-medium">
+                                                <h3>Embutidos Artesanales</h3>
+                                                <p class="ml-4">$19.98</p>
+                                            </div>
+                                            <p class="mt-1 text-sm text-[#221310]/70 dark:text-[#f8f6f6]/70">2 u</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-8 border-t border-primary/20 pt-8 dark:border-primary/30">
+                        <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+                            <div>
+                                <h3 class="text-2xl font-bold">Dirección de envío</h3>
+                                <address class="mt-4 not-italic text-[#221310]/70 dark:text-[#f8f6f6]/70">
+                                    Juan Pérez<br />
+                                    Calle Falsa 123<br />
+                                    Ciudad, Provincia 12345<br />
+                                    Argentina
+                                </address>
+                            </div>
+                            <div class="space-y-4">
+                                <div class="flex justify-between">
+                                    <span>Subtotal</span>
+                                    <span class="font-bold">$55.35</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Envío</span>
+                                    <span class="font-bold">$5.00</span>
+                                </div>
+                                <div
+                                    class="flex justify-between font-bold text-xl border-t border-primary/20 pt-4 dark:border-primary/30">
+                                    <span>Total</span>
+                                    <span>$60.35</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-12 text-center">
+                        <h3 class="text-xl font-bold">¿Qué sigue?</h3>
+                        <p class="mt-2 text-[#221310]/70 dark:text-[#f8f6f6]/70">Puedes revisar el estado de tu pedido
+                            en tu cuenta o contactarnos si tienes alguna pregunta.</p>
+                        <div class="mt-6 flex justify-center gap-4">
+                            <a class="rounded-lg border border-primary px-6 py-3 text-primary transition-colors hover:bg-primary hover:text-white"
+                                href="/template-carniceria-01/micuenta/">Mi Cuenta</a>
+                            <a class="rounded-lg bg-primary px-6 py-3 font-bold text-white shadow-md transition-opacity hover:opacity-90"
+                                href="/template-carniceria-01/">Continuar comprando</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="bg-background-light dark:bg-background-dark border-t border-primary/20 dark:border-primary/30">
+            <div class="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
+                <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+                    <div class="flex items-center gap-4">
+                        <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+                        </svg>
+                        <p class="text-sm font-medium text-[#221310] dark:text-[#f8f6f6]">© 2025 Templates Market
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+                        <a class="text-sm hover:text-primary" href="#">Política de Privacidad</a>
+                        <a class="text-sm hover:text-primary" href="#">Términos de Servicio</a>
+                        <a class="text-sm hover:text-primary" href="#">Contacto</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+  <script src="../main.js"></script>
+</body>
+
+</html>

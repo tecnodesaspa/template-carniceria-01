@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Carnicería</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#d43211",
+            "background-light": "#f8f6f6",
+            "background-dark": "#221310",
+          },
+          fontFamily: {
+            "display": ["Newsreader"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-300">
+  <div class="min-h-screen flex flex-col">
+    <header
+        class="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-primary/20 bg-background-light/80 px-10 py-3 backdrop-blur-sm dark:bg-background-dark/80">
+        <div class="flex items-center gap-3">
+          <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
+              fill="currentColor"></path>
+          </svg>
+          <h2 class="text-lg font-bold">Carnicería El Rancho</h2>
+        </div>
+        <nav class="hidden items-center gap-8 md:flex" id="navMenu">
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/">Inicio</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/productos/">Productos</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/recetas/">Recetas</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/nosotros/">Nosotros</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/contacto/">Contacto</a>
+        </nav>
+        <button class="md:hidden text-gray-900 dark:text-white" id="btnMenu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+          </svg>
+        </button>
+        <div class="flex items-center gap-4">
+          <a href="/template-carniceria-01/carrito/"
+            class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-primary/10 text-primary/80 transition-colors hover:bg-primary/20 dark:bg-primary/20 dark:text-primary/90 dark:hover:bg-primary/30">
+            <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z">
+              </path>
+            </svg>
+        </a>
+        </div>
+      </header>
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight">Términos y Condiciones
+          </h1>
+          <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">Última actualización: 1 de Agosto, 2024</p>
+        </div>
+        <div class="space-y-10">
+          <div
+            class="prose prose-lg dark:prose-invert max-w-none prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300">
+            <h2 class="text-2xl font-bold">1. Uso del Sitio Web</h2>
+            <p>Al acceder y utilizar el sitio web de Carnicería El Rancho, usted acepta cumplir con estos Términos y
+              Condiciones. Si no está de acuerdo con alguna parte de estos términos, no debe utilizar nuestro sitio web.
+              El uso de este sitio está destinado a personas mayores de edad con capacidad legal para contratar.</p>
+            <h2 class="text-2xl font-bold">2. Derechos de Autor</h2>
+            <p>Todo el contenido presente en este sitio web, incluyendo textos, gráficos, logotipos, imágenes, clips de
+              audio, descargas digitales y software, es propiedad de Carnicería El Rancho o de sus proveedores de
+              contenido y está protegido por las leyes internacionales de derechos de autor. No se permite la
+              reproducción, distribución o modificación de cualquier contenido sin el consentimiento expreso por escrito
+              de Carnicería El Rancho.</p>
+            <h2 class="text-2xl font-bold">3. Responsabilidades del Usuario</h2>
+            <p>Usted es responsable de mantener la confidencialidad de cualquier información de cuenta y contraseña que
+              utilice para acceder a nuestro sitio web. Acepta la responsabilidad de todas las actividades que ocurran
+              bajo su cuenta o contraseña. Se compromete a no utilizar el sitio web para fines ilegales, fraudulentos o
+              prohibidos por estos Términos y Condiciones.</p>
+            <h2 class="text-2xl font-bold">4. Política de Ventas y Devoluciones</h2>
+            <p>Debido a la naturaleza perecedera de nuestros productos, todas las ventas son finales y no aceptamos
+              devoluciones ni cambios. Queremos que esté completamente satisfecho con su compra. Si recibe un producto
+              dañado o incorrecto, por favor, contáctenos a nuestro servicio de atención al cliente dentro de las 24
+              horas siguientes a la recepción de su pedido, proporcionando evidencia fotográfica, para que podamos
+              evaluar la situación y ofrecer una solución adecuada, que puede incluir un reemplazo o un crédito en la
+              tienda.</p>
+            <h2 class="text-2xl font-bold">5. Resolución de Disputas</h2>
+            <p>Cualquier disputa que surja en relación con el uso de este sitio web o la compra de productos se
+              resolverá mediante negociación de buena fe entre las partes. Si no se puede llegar a una resolución
+              amistosa, la disputa se someterá a la jurisdicción exclusiva de los tribunales competentes en la ubicación
+              principal de Carnicería El Rancho, renunciando a cualquier otro fuero que pudiera corresponder.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-background-light dark:bg-background-dark border-t border-primary/20 dark:border-primary/30">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-4 md:space-y-0">
+          <p class="text-sm text-gray-600 dark:text-gray-400">© 2025 Templates Market. Todos los derechos
+            reservados.</p>
+          <div class="flex space-x-6">
+            <a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+              href="/template-carniceria-01/politicas/">Política de Privacidad</a>
+            <a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+              href="/template-carniceria-01/terminos/">Términos y Condiciones</a>
+            <a class="text-sm text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+              href="/template-carniceria-01/contacto/">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="../main.js"></script>
+</body>
+
+</html>

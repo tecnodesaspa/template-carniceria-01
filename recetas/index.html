@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Carnicería</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#d43211",
+            "background-light": "#f8f6f6",
+            "background-dark": "#221310",
+          },
+          fontFamily: {
+            "display": ["Newsreader"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-stone-800 dark:text-stone-300">
+  <div class="flex flex-col min-h-screen">
+    <header
+        class="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-primary/20 bg-background-light/80 px-10 py-3 backdrop-blur-sm dark:bg-background-dark/80">
+        <div class="flex items-center gap-3">
+          <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
+              fill="currentColor"></path>
+          </svg>
+          <h2 class="text-lg font-bold">Carnicería El Rancho</h2>
+        </div>
+        <nav class="hidden items-center gap-8 md:flex" id="navMenu">
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/">Inicio</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/productos/">Productos</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/recetas/">Recetas</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/nosotros/">Nosotros</a>
+          <a class="text-sm font-medium hover:text-primary" href="/template-carniceria-01/contacto/">Contacto</a>
+        </nav>
+        <button class="md:hidden text-gray-900 dark:text-white" id="btnMenu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+          </svg>
+        </button>
+        <div class="flex items-center gap-4">
+          <a href="/template-carniceria-01/carrito/"
+            class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full bg-primary/10 text-primary/80 transition-colors hover:bg-primary/20 dark:bg-primary/20 dark:text-primary/90 dark:hover:bg-primary/30">
+            <svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z">
+              </path>
+            </svg>
+        </a>
+        </div>
+      </header>
+    <main class="flex-grow">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tighter text-stone-900 dark:text-white">Recetas
+              Deliciosas con Nuestros Cortes</h1>
+            <p class="mt-4 text-lg text-stone-600 dark:text-stone-400 max-w-2xl mx-auto">
+              Descubre nuevas formas de disfrutar nuestros productos con estas recetas cuidadosamente seleccionadas.
+              Desde cortes clásicos hasta opciones innovadoras, te guiaremos paso a paso para crear platillos
+              inolvidables.
+            </p>
+          </div>
+          <div class="mb-16">
+            <h2 class="text-3xl font-bold text-stone-900 dark:text-white mb-6">Recetas Destacadas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div class="flex flex-col gap-4 group">
+                <div class="overflow-hidden rounded-lg">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAvxMTp1fOInZMJsrXr_jn61JiJtRzFViKbvjZgP61l69kJIwNKK3f9t6dxEOpzuGPDgL3kWeKG6d5qzaV2Nh0SOfdnRp1KywOZHq18R5LPsTrNeHTsCbnK8QIiHguB9_CQaNEbdlhxjnKFDZPlK2NWlwYysTLGDeqL3DxU8Lgyyhk6DUPr3K88PaNyUQoHKV8j_-j6ys6-iqbkJLsmhGWULVpsfqReoYHrxjYbgU6xP4SE2OgyMcGc1KeAvyQ2KC9nle0FD0FEmOQ");'>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-stone-800 dark:text-stone-200">Bife de Chorizo a la Parrilla</h3>
+                  <p class="text-sm text-stone-600 dark:text-stone-400 mt-1">Un clásico argentino que nunca falla. La
+                    combinación del bife de chorizo con el aroma del romero y el ajo es simplemente irresistible.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4 group">
+                <div class="overflow-hidden rounded-lg">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAI2IKFPc6DwzV7F4H2B-G4XFYXkzT5Oit6m61SF3yVSIGp5hRQlHiuMUZLsxGcjA2mVK4pN-hk4TT56y9U6ii3_P1v1cV0bDXbXfCx_aD3mVsiilVK71NAcFb-gbdp-HPard6TwLLLrtrvunvkRBztGVXztat9B6PAW4UltJw_Q-K6xcnFLNRcoGoAC9EzYPl4OzMv4YmntPcdQylD-Ad0ZWFelk8qBZsbUBeCXZxtpvOlJRXRTaxfN3xakYA3ZEA9Whlgw-wmBU4");'>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-stone-800 dark:text-stone-200">Costillas de Cerdo a la Barbacoa</h3>
+                  <p class="text-sm text-stone-600 dark:text-stone-400 mt-1">Costillas de cerdo marinadas en salsa
+                    barbacoa, cocinadas a fuego lento hasta alcanzar una textura tierna y jugosa.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4 group">
+                <div class="overflow-hidden rounded-lg">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRqD0rJ5S1OiWYtkrQa2MU_4mmxP1QdQI-J2rcLMN70x5nrLXvINCnOfKzNWBHweSqMLKgyuya-PU5Lw27f1JTdcs9agkG9Xmm9BlHtor2-Kg4nV6N1M8myeVWaUmwTS0cM2OVO6lrKS9POPYjZEhZY6o2gdkNReLXzQ16ScMsJyuKjoPGylCZRkHSLxjXpM7R4gp4Oo9HYn3ckHy5ysd8eglsvzL7f5FWUkWiQ5MquEthywRl_WHpnLyQn4ZUs9K2U1zsKxpTPAU");'>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-stone-800 dark:text-stone-200">Brochetas de Pollo con Verduras</h3>
+                  <p class="text-sm text-stone-600 dark:text-stone-400 mt-1">Brochetas de pollo marinadas con una mezcla
+                    de especias, intercaladas con pimientos, cebollas y calabacín.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 class="text-3xl font-bold text-stone-900 dark:text-white mb-8">Todas Nuestras Recetas</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12">
+              <div class="flex flex-col gap-3 group">
+                <div class="overflow-hidden rounded-lg">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBhzm-Y8OMnFoJ_EfYMNL7P1fO7xraJug76g61zje865Qo02ObneeOZk83Sb18TaWnWUzghfIId7dpDqh1PeyD1mCn0zHSazZZ7lr42VgadT2Fek-5McZacdKblH77PywgkhJXoODu87GYJ_ZkYEJ3QJPyQchgV4uSAyhZIxYy5cMwGE5p-GBk1Ss3Ov-P7mX6QhlP_txxMXacz8_sX0qaGbFaZ5BP0pOMcuo7R7TlVvJOnExMyk00IBH8kJOlUN8eq5FpDQ7vcQVc");'>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-stone-800 dark:text-stone-200">Milanesas de Ternera con Puré</h3>
+                  <p class="text-sm text-stone-600 dark:text-stone-400 mt-1">Un plato reconfortante y lleno de
+                    tradición.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 group">
+                <div class="overflow-hidden rounded-lg">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC1uJvuoKU0nHrhuVO51GG_oe6VRiWqN38mM2pmg4GCjktH2Xb_hrdQNI_IFzTJThPks9sUexibGKUAPhAUY7GFE8UNl672D2RHpAF5j1ERJC8wbXad5jnjyxpLHcQoLlbQzwUUDJ7fu2i9QO6fNLyzot3IHxYfgjCHjDAANpXVij_yw2dBzeCi6fNGaB-Efcri9KmMERQgN3linXpPCT58BIZ6aGBYy-_QA9Ctt8M_ovcH3Cgs47MdJeYgNEJDNjPbJryydxQizHI");'>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-stone-800 dark:text-stone-200">Empanadas de Carne Caseras</h3>
+                  <p class="text-sm text-stone-600 dark:text-stone-400 mt-1">Perfectas como aperitivo o plato principal.
+                  </p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 group">
+                <div class="overflow-hidden rounded-lg">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDFJKlfrChTuHX36lMVmL2_bHzZMRcUDFNjLD4SxOfLnE_eh4gXC3pW13vi7_da0IHrS58UxaJgVvsZTxDgzZo7kgY7taIZgy93Csgsk3ov2awZ8ILzY-4-BfsZwQ_JQkN0uxBxhwYqjToWf-d-hTBSNlaA4p4TyjSItaiPTgKLlicRw37enF1LsljkdCBRSIUQlbv52Qg-sXB_QT1KHqp0lZW12_8xrTcmU23ERvnTvfmMASOWZP6eTA85QbMN4EM5WBELFbnTB3U");'>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-stone-800 dark:text-stone-200">Locro Criollo</h3>
+                  <p class="text-sm text-stone-600 dark:text-stone-400 mt-1">Ideal para los días fríos.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 group">
+                <div class="overflow-hidden rounded-lg">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA41xtMxqSpCWas0_Sk5yl9HWrFUZ2bJ9iMFQ654slwXvIsb5u8i_OBK8qbqAqC8fxtA_1PZtRB-5hfW8MZTwQVKi9oWiAIsEtMvpdM3MgB6bcL39O3lORQ8F-yxvdjCFTp2H4cmbuDaEa8YIyYDTZOjR-gfVbyR2fTWr1bzL-rNFMGMprp_VvARBZTsCapzp-TlhzL8Ms5zWC_H_QE-VJZaBsCXNIjj3O44ATu6D_Nsb5R06lalilyWwZetzWf6ELvX0zXinby0aI");'>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-stone-800 dark:text-stone-200">Asado Argentino Completo</h3>
+                  <p class="text-sm text-stone-600 dark:text-stone-400 mt-1">Acompañado de ensaladas frescas y
+                    chimichurri.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 group">
+                <div class="overflow-hidden rounded-lg">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA9GJrpdcI--jNlnwNE0qLsgHOpePeJjKw0JVJWt--op_8NVngRLtxSTsv40RvUd1EbrLGTkqd-2bPYhbJu_bSPUYCmfp9w-CbPscoTSK-vr8oH_kG4-_QDRXSUYsfreYZe_d1Ugesbdt93_oICiymq_Z_vFkPVd-j67RyDb2d4nWDxa4i2fZJ0Sc-hc0f4ZcPmPrC1B6GqGCKsY8-Njmvy8_INCv_gQSSFWW9TXUVCW7H-zveGaIEz-8A16htYgTReMI4fi3GwN10");'>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-stone-800 dark:text-stone-200">Choripán con Chimichurri</h3>
+                  <p class="text-sm text-stone-600 dark:text-stone-400 mt-1">Un sándwich callejero argentino por
+                    excelencia.</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3 group">
+                <div class="overflow-hidden rounded-lg">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg transition-transform duration-500 group-hover:scale-105"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5FUregimxgekQ_v37HLsAGlPXd0YoYQIFQOImO5lKk0Pm82mWjCFovUk2Ac_FXRBz3KZ6NyxaXVmJns2jI2dUBiIrvEX9Am09sYXUQc9PmuK1-Mi1HwHfy_WoUEVpQPwtnYS68FFNtc5Y-hNgS5FfUZ_yTZp2PWzMZo3Q-dipBAv7eOpkSseQY0vNzAO_NSTM-CNYHmJyUZ5-H5vG3zrFAF2uIG9EGOODKWxlOZtzhV_Dq2eSg-_zNIO47J_G3oeVcGtHitPYwuI");'>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-stone-800 dark:text-stone-200">Matambre a la Pizza</h3>
+                  <p class="text-sm text-stone-600 dark:text-stone-400 mt-1">Una alternativa deliciosa a la pizza
+                    tradicional.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-background-light dark:bg-background-dark border-t border-stone-200 dark:border-stone-800">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+          <p class="text-sm text-stone-500 dark:text-stone-400">© 2025 Templates Market. Todos los derechos
+            reservados.</p>
+          <div class="flex gap-6">
+            <a class="text-sm text-stone-500 dark:text-stone-400 hover:text-primary transition-colors" href="/template-carniceria-01/politicas/">Política
+              de Privacidad</a>
+            <a class="text-sm text-stone-500 dark:text-stone-400 hover:text-primary transition-colors" href="/template-carniceria-01/terminos/">Términos
+              y Condiciones</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="../main.js"></script>
+</body>
+
+</html>
