@@ -52,6 +52,28 @@
         'opsz' 24
     }
   </style>
+<style>
+/* Responsive layout: preserve content and keep controls within the viewport. */
+:where(main, section, article, aside, header, footer, nav, form, fieldset, .flex > *, .grid > *) { min-width: 0; }
+img, video, iframe { max-width: 100%; }
+:where(input, select, textarea) { max-width: 100%; }
+:where(p, h1, h2, h3, a, label) { overflow-wrap: break-word; }
+@media (max-width: 767px) {
+  .px-40, .px-20, .px-16, .px-12, .px-10 { padding-left: 1rem !important; padding-right: 1rem !important; }
+  [class*="min-w-["] { min-width: 0 !important; }
+  table { display: block; max-width: 100%; overflow-x: auto; }
+  .toast-notification { max-width: calc(100vw - 2rem); right: 1rem; }
+}
+
+/* Tablet navigation, footer wrapping, and decorative accents. */
+.material-symbols-outlined { flex-shrink: 0; overflow-wrap: normal; white-space: nowrap; }
+footer li, footer a { overflow-wrap: anywhere; }
+@media (max-width: 1023px) {
+  footer .md\:grid-cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .absolute.-right-6 { right: 0; }
+}
+</style>
+<meta name="currency" content="CLP">
 </head>
 
 <body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
@@ -106,15 +128,14 @@
                 <span class="material-symbols-outlined text-primary mt-1">location_on</span>
                 <div>
                   <h4 class="font-bold text-text-light dark:text-text-dark">Dirección</h4>
-                  <p class="text-subtle-light dark:text-subtle-dark">Calle Principal 123, Ciudad, Provincia, Código
-                    Postal</p>
+                  <p class="text-subtle-light dark:text-subtle-dark">Av. Providencia 123, Santiago, Chile</p>
                 </div>
               </div>
               <div class="flex items-start gap-4">
                 <span class="material-symbols-outlined text-primary mt-1">call</span>
                 <div>
                   <h4 class="font-bold text-text-light dark:text-text-dark">Teléfono</h4>
-                  <p class="text-subtle-light dark:text-subtle-dark">+1 (555) 123-4567</p>
+                  <p class="text-subtle-light dark:text-subtle-dark">+56 2 2345 6789</p>
                 </div>
               </div>
               <div class="flex items-start gap-4">

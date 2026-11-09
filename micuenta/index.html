@@ -52,6 +52,28 @@
                 'opsz' 24
         }
     </style>
+<style>
+/* Responsive layout: preserve content and keep controls within the viewport. */
+:where(main, section, article, aside, header, footer, nav, form, fieldset, .flex > *, .grid > *) { min-width: 0; }
+img, video, iframe { max-width: 100%; }
+:where(input, select, textarea) { max-width: 100%; }
+:where(p, h1, h2, h3, a, label) { overflow-wrap: break-word; }
+@media (max-width: 767px) {
+  .px-40, .px-20, .px-16, .px-12, .px-10 { padding-left: 1rem !important; padding-right: 1rem !important; }
+  [class*="min-w-["] { min-width: 0 !important; }
+  table { display: block; max-width: 100%; overflow-x: auto; }
+  .toast-notification { max-width: calc(100vw - 2rem); right: 1rem; }
+}
+
+/* Tablet navigation, footer wrapping, and decorative accents. */
+.material-symbols-outlined { flex-shrink: 0; overflow-wrap: normal; white-space: nowrap; }
+footer li, footer a { overflow-wrap: anywhere; }
+@media (max-width: 1023px) {
+  footer .md\:grid-cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .absolute.-right-6 { right: 0; }
+}
+</style>
+<meta name="currency" content="CLP">
 </head>
 
 <body class="bg-background-light dark:bg-background-dark font-display text-content-light dark:text-content-dark">
@@ -106,7 +128,7 @@
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
                             <p class="text-subtle-light dark:text-subtle-dark">Número de teléfono</p>
-                            <p class="md:col-span-2 text-content-light dark:text-content-dark">+34 666 777 888</p>
+                            <p class="md:col-span-2 text-content-light dark:text-content-dark">+56 9 8765 4321</p>
                         </div>
                     </div>
                 </section>
@@ -131,7 +153,7 @@
                                     <tr class="border-t border-border-light dark:border-border-dark">
                                         <td class="p-4">15 de mayo de 2024</td>
                                         <td class="p-4">123456</td>
-                                        <td class="p-4">55,00 €</td>
+                                        <td class="p-4">$55.000</td>
                                         <td class="p-4">
                                             <span
                                                 class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/20 text-primary">
@@ -142,7 +164,7 @@
                                     <tr class="border-t border-border-light dark:border-border-dark">
                                         <td class="p-4">22 de abril de 2024</td>
                                         <td class="p-4">654321</td>
-                                        <td class="p-4">42,50 €</td>
+                                        <td class="p-4">$42.500</td>
                                         <td class="p-4">
                                             <span
                                                 class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/20 text-primary">
@@ -153,7 +175,7 @@
                                     <tr class="border-t border-border-light dark:border-border-dark">
                                         <td class="p-4">10 de marzo de 2024</td>
                                         <td class="p-4">987654</td>
-                                        <td class="p-4">68,75 €</td>
+                                        <td class="p-4">$68.750</td>
                                         <td class="p-4">
                                             <span
                                                 class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/20 text-primary">
